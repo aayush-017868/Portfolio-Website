@@ -1,0 +1,736 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-color: aliceblue;
+  text-align: center;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  /* background-color: antiquewhite; */
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+.nav {
+  display: flex;
+  background: linear-gradient(to left, rgb(206, 232, 255), rgb(218, 237, 253));
+
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.name {
+  margin: 0.2rem 3rem;
+  font-size: large;
+  padding: 0;
+}
+
+/*This code is for list of options in the nav bar aligned horizontally*/
+@media (max-width: 992px) {
+  .options {
+    display: none;
+  }
+}
+.options {
+  padding-right: 2rem;
+  font-size: 1.2rem;
+}
+
+.options li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 1.75rem 0 1.75rem;
+}
+
+.options li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/*This is the code for dropdown*/
+
+.dropdown {
+  position: relative;
+  right: 13%;
+  padding-right: 5%;
+  display: none;
+}
+.dropdown-btn {
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+}
+/* Style for the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  /* margin-top: 10rem; */
+  z-index: 1;
+}
+/* Show the dropdown content when the dropdown button is clicked */
+.dropdown-content a {
+  color: #333;
+  padding: 0.75rem;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content.show {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+@media (max-width: 992px) {
+  .dropdown {
+    display: inline-block;
+  }
+}
+
+/* NAVIGATION BAR CODE ENDS HERE */
+/* NAVIGATION BAR CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* HOME SECTION CODE STSRTS HERE */
+/* HOME SECTION CODE STSRTS HERE */
+
+@media (max-width: 768px) {
+  .container {
+    height: 90vh;
+  }
+}
+
+.container {
+  background-color: aliceblue;
+  border-radius: 0.5rem;
+  padding-top: 0;
+  margin: 1rem;
+  margin-top: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.fading-text {
+  font-family: Arial;
+  font-size: 10rem;
+  animation: fadeIn 3s;
+}
+.front {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "poppins";
+}
+.front h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+}
+h1 {
+  font-weight: bold;
+  opacity: 1;
+  transform: translateY(0);
+}
+h2.subheading {
+  font-size: 2rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+.subheading {
+    font-size: 2rem;
+    font-weight: normal;
+    padding-bottom: 1rem;
+}
+
+.resume {
+  display: inline-block;
+  height: 3rem;
+}
+@media (max-width: 768px) {
+  #res-link {
+    display: block;
+  }
+}
+/* HOME SECTION CODE ENDS HERE */
+/* HOME SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* ABOUT SECTION CODE STARTS HERE */
+/* ABOUT SECTION CODE STARTS HERE */
+/* About Page */
+#about {
+  padding-top: 2rem;
+  width: 100%;
+}
+
+h2.subheading {
+  color: #3a6767;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+
+.about {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  padding: 0;
+  width: 50%;
+  text-align: justify;
+  margin-left: 2rem;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .image-sec {
+    height: auto;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.image-sec {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* This is a section which will be containing another circle inside it which will further contain the image */
+
+.circle {
+  background-color: transparent;
+  width: 22rem;
+  height: 22rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 470px) {
+  .circle {
+    height: 15rem;
+    width: 15rem;
+  }
+}
+
+/* This is the styling for the circle which contains our image and a text when flipped  */
+.inner-circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0.5rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+/* Here, we are styling the front and the back circle together */
+
+/* This is that circle which contains our image which will be displayed on the front side  */
+.inner-circle-front {
+  width: 50rem;
+  height: 50rem;
+  background-color: #3498db;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.dp {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+
+.inner-circle-front,
+.inner-circle-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.inner-circle-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inner-circle-back > h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+/*First Paragraph*/
+.about-text-heading {
+  padding: 0;
+  font-size: 1.2rem;
+  color: #186f6f;
+}
+
+/*These 3 selectors are for the below rwo paragraphs where we shall apply animation*/
+.about-text-content {
+  padding: 0;
+  font-size: 0.9rem;
+  color: #289595;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hidden-paragraph {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: opacity 1s, transform 1s;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* This will style the icons */
+
+.icons {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 470px) {
+  .icons a {
+    font-size: 2rem;
+  }
+}
+
+.icons a {
+  font-size: 2.5rem;
+  color: #186f6f;
+}
+a {
+  text-decoration: none;
+}
+.icons i {
+  margin: 1rem;
+}
+
+.fa-brands,
+.fab {
+  font-weight: 400;
+}
+
+.fa-brands,
+.fab {
+  font-family: "Font Awesome 6 Brands";
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    width: 100%;
+    text-align: justify;
+    margin: 0;
+  }
+}
+
+/* ABOUT SECTION CODE ENDS HERE */
+/* ABOUT SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* EDUCATION SECTION CODE STARTS HERE */
+/* EDUCATION SECTION CODE STARTS HERE */
+
+.edu-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.edu-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 40rem;
+  width: inherit;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* All css for salesforce educationset */
+.edu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: scale(1.1);
+}
+/*Styles the headings of each education*/
+.edu-header {
+  padding: 0rem 1rem;
+  font-weight: 600;
+  text-align: center;
+  height: 5rem;
+}
+.edu-header > p {
+  margin: 0;
+  padding: 1rem 0rem 0rem 0rem;
+}
+
+/*Styles the description container of each educaiton*/
+.edu-descBox {
+  height: 25rem;
+  text-align: left;
+}
+
+/*Targets all the description inside the education cards*/
+.edu-desc {
+  width: 200px;
+  padding: 0rem 1rem;
+  /* text-align: left; */
+}
+
+/* Class heading */
+.edu-cl {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0;
+}
+/* To make text bolder  */
+.edu-bolder {
+  font-weight: 600;
+}
+
+@media (max-width: 880px) {
+  .education {
+    height: 70rem;
+  }
+}
+
+@media (max-width: 545px) {
+  .education {
+    height: 102rem;
+  }
+}
+
+/* .education{
+        display: flex;
+        flex-direction: column;
+    } */
+
+/* EDUCATION SECTION CODE ENDS HERE */
+/* EDUCATION SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* SKILLS SECTION CODE STARTS HERE */
+/* SKILLS SECTION CODE STARTS HERE */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+/* Heading for the main skill, not related to any card */
+.skills-heading {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/*Styles all the logos used in the skill cards*/
+.skill-pic {
+  height: 4rem;
+  width: 100%;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: inherit;
+  width: inherit;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/*Highlight the key points inside the description of the skills*/
+.make-bold-points {
+  font-weight: 500;
+}
+/* All css for salesforce skillset */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+}
+/*Styles the headings of each skill*/
+.skill-header {
+  font-weight: 600;
+  text-align: center;
+  height: 3rem;
+  padding: 0 1rem;
+}
+/*Styles the logo container of each skill*/
+.skill-logo {
+  height: 3rem;
+}
+/*Styles the description container of each skill*/
+.skill-descBox {
+  height: 28rem;
+  text-align: left;
+  /* text-align: center; */
+}
+/* Style the buttons container inside cards */
+.skill-btn-container {
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+  margin-top: 1.5rem;
+}
+.skill-btn-container > p {
+  margin: 0;
+  padding: 0rem 1rem 0rem 1rem;
+}
+/*Targets all the description inside the skill cards*/
+.skill-desc {
+  width: 200px;
+  padding: 0rem 1rem 0rem 2rem;
+  /* text-align: left; */
+}
+.skill-desc::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+/*Salesforce*/
+.skill-tb {
+  background-image: url(trailhead.png);
+}
+.skill-sfbtn {
+  display: flex;
+  padding-left: 2rem;
+  justify-content: left;
+}
+
+/*Frontend*/
+#feh {
+  padding: 0rem 1rem 0rem 1rem;
+}
+/*Soft Skills*/
+
+/*Problem Solving*/
+/* Styling the buttons */
+.skill-lc {
+  background-image: url("leetcodeButton.png");
+}
+
+.skill-hk {
+  background-image: url("HackerrankButton.png");
+}
+.skill-btn {
+  background-size: cover;
+  background-position: center;
+  display: absolute;
+  width: 6rem;
+  height: 1.6rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/* SKILLS SECTION CODE ENDS HERE */
+/* SKILLS SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+*-------------------------------------------------------------------------------*/
+    /* PROJECT SECTION CODE STARTS HERE */
+    /* PROJECT SECTION CODE STARTS HERE */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/* Heading for the main education, not related to any card */
+.proj-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.proj-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 35rem;
+  width: inherit;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+}
+
+.proj-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.8rem;
+  transition: transform 0.3s ease;
+}
+.proj-card {
+  transform: scale(1.1);
+}
+
+.proj-img {
+  padding: 1rem 0rem;
+  height: 7rem;
+  width: 9rem;
+}
+.proj-image {
+  border-radius: ;
+  width: 9rem;
+}
+.proj-header {
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 0.3rem;
+}
+.proj-header > p {
+  margin: 0;
+}
+.proj-desc {
+  margin: 0;
+  width: 10rem;
+  height: 9rem;
+  padding: 0rem 1rem 0rem 1.8rem;
+}
+
+.proj-click-btn {
+  padding: 1rem 0rem;
+}
+
+/* Button Properties */
+.proj-choose {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #00a7fa;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.proj-choose:hover {
+  background-color: black;
+}
+.button-5:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+/* PROJECT SECTION CODE ENDS HERE */
+/* PROJECT SECTION CODE ENDS HERE */

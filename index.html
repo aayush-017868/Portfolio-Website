@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Website</title>
+<link rel="stylesheet" href="style.css">
+<!-- <link rel="icon" href="./Favicon.png">
+<link rel="stylesheet" href="./responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> -->
+</head>
+<body>
+<div class="main">    
+<!-- This is our nav bar -->
+<div class="nav">
+    <!-- This is our name to be displayed on top left corner -->
+    <div class="name">
+        <a href="#" id="refreshbutton"><p>Aayush</p></a>
+    </div>
+    <!-- This is a set of options to be displayed from the  top  right corner -->
+    <div class="options">
+    <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        
+    </ul>
+</div>
+    <!-- This is a dropdown that will help in direct navigation to the sections -->
+    <!-- It is basically used for opening the webpage in the small width devices -->
+    <div class="dropdown">
+        <div onclick="toggleDropdown()" class="dropdown-btn" >≡</div>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="./Resume.pdf" id="res-link">Download Resume</a>
+        </div>
+    </div>
+</div>
+
+
+    <!-- This is our Home Section Page  -->
+    <div class="container">
+        <!-- This is a box which will have name -->
+        <div class="front fading-text">
+            <h1>Hi
+                <span class="sm">,</span>
+                I am <br>
+                Aayush<span class="sm">.</span>
+            </h1>
+            <!-- This is the designation that will lie below the name -->
+            <h2 class="subheading">A Programmer and Web-Developer</h2>
+        </div>
+        <!-- This is the resume download button -->
+        <a class="proj-click-btn" href="./Resume.pdf" download="AayushResume.pdf" target="_blank">
+            <button class="proj-choose">Resume</button>
+        </a>
+    </div>
+
+    <hr style="width: 50%;">
+    
+    <!-- This is About Section -->
+    <section id="about">
+        <h2 class="subheading">About Me</h2>
+        <div class="about">
+            <div class="proj-image-sec">
+                <div class="circle">
+                    <div class="inner-circle">
+                        <div class="inner-circle-front">
+                            <img class="dp d-block mx-auto mb-4" src="myphoto.jpg" alt="Picture of "> 
+                        </div>
+                        <div class="inner-circle-back">
+                            <h3>Hello!<br>It's Aayush Patle</h3>
+                            <p>Thanks for visiting!</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/aayush-patle-31878a225/" target="_blank">
+                        <i class="fa-brands fa-linkedin linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100006274249043" target="_blank">
+                        <i class="fa-brands fa-square-x-twitter twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/aayush-017868" target="_blank">
+                        <i class="fa-brands fa-square-github github" aria-hidden="true"></i>
+                    </a>
+                </div> 
+            </div>   
+            <div class="about-text">
+                <p class="about-text-heading">
+                    I am a frontend web developer and programmer. My objective is to work with an organization that fosters learning opportunities, allowing me to expand my skill set and boost both organizational objectives and personal advancement.
+                </p>
+                <p class="about-text-content hidden-paragraph visible">
+                    As an MCA final year student, I am passionate about leveraging technology to solve real-world challenges. My skill set encompasses a diverse range of technologies and programming languages, making me adept in both front-end and back-end development. Proficient in HTML, CSS, and JavaScript, I bring a creative approach to web design. 
+                </p>
+                <p class="about-text-content hidden-paragraph">
+                    In addition to my web development skills, I am well-versed in Java, enabling me to develop efficient and scalable solutions. My proficiency extends to using this learning to solve various programming and coding problems.
+                </p>
+            </div>
+        </div>
+    </section>
+    <a name="education"><hr style="width: 50%;"></a>
+    
+    
+    <!-- This is Education Section -->
+    <!-- This is Education Section -->
+    <div class="education">
+        <header><p class="edu-heading">Education</p></header>
+        <div class="edu-container">
+            
+            <!-- Education 1 -->
+            <div class="edu-card">
+                <div class="edu-header"><p>Master of Computer Applications</p><hr>
+                    <p class="edu-session">2022-2024</p></div>
+                    <!-- <div class="logo">
+                        <img class="lnct-pic" src="lnct.png" alt="">
+                    </div> -->
+                    <div class="edu-descBox">
+                        <p class="edu-desc">
+                            I am Currently pursuing MCA from Lakshmi Narain College of Technology MCA, Bhopal. 
+                            <br><br>
+                            <strong>Current CGPA :</strong> 
+                            8.67
+                        </p>
+                </div>
+                <div class="edu-btn-container">
+                    
+                </div>
+            </div>
+            
+            <!--Education 2 -->
+            <div class="edu-card">
+                <div class="edu-bsc edu-header">
+                    <p>B.Sc (Hons.) Physics</p><hr>
+                    <p class="edu-session">2018-2021</p>
+                </div>
+                <!-- <div class="logo">
+                    <img class="bsc-pic" src="du.jpg" alt="">
+                </div> -->
+                <div class="edu-descBox">
+                    <p class="edu-desc">
+                        I have done my graduation in B.Sc (Honours) in Physics from the University of Delhi.
+                        <br><br>
+                        <strong>CGPA :</strong> 
+                        8.67
+                    </p>
+                </div>
+                <!-- <div class="btn-container"></div> -->
+            </div>
+            
+            <!--Education 3 -->
+            <div class="edu-card edu-schooling" >
+                <div class="edu-school edu-header">
+                    <p>School Academics</p>
+                    <hr>
+                </div>
+                <!-- <div class="logo" id="scl-logo">
+                    <img class="scl-pic" src="MPBSE.webp" alt="">
+                </div> -->
+                <div class="edu-descBox">
+                    <div class="edu-desc">
+                        <p class="edu-cl">Class XII </p>
+                        <span class="edu-bolder">Year :</span> 2018<br>
+                        <span class="edu-bolder">Board :</span> Madhya Pradesh Board of Secondary Education <br>
+                        <span class="edu-bolder">School :</span> Vivek Jyoti H.S. School
+                        <br>
+                        <span class="edu-bolder">Percentage :</span> 88.80%
+                        <br>
+                        <br>
+                        <hr>
+                        
+                        <p class="edu-cl">Class X </p>
+                        <span class="edu-bolder">Year :</span> 2016<br>
+                        <span class="edu-bolder">Board :</span> Madhya Pradesh Board of Secondary Education <br>
+                        <span class="edu-bolder">School :</span> Vivek Jyoti H.S. School
+                        <br>
+                        <span class="edu-bolder">Percentage :</span> 89.83%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <a name="skills"><hr style="width: 50%;"></a>
+    <!-- This is Education Section -->
+    <!-- This is Education Section -->
+
+
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+    <div class="skills">
+
+
+        <header><p class="skills-heading">Skills</p></header>
+        <div class="skills-container">
+    
+            <!-- Skill 1 -->
+            <div class="skill-card salesforce">
+                <div class="skill-header"><p>Salesforce</p></div>
+                <div class="skill-logo">
+                    <img class="skill-pic" src="https://www.salesforce.com/news/wp-content/uploads/sites/3/2021/05/Salesforce-logo.jpg" alt="">
+                </div>
+                <div class="skill-descBox">
+                    <p class="skill-desc">I bring a comprehensive skill set and extensive experience in Salesforce Administration, Salesforce Development, Data Management, Workflow Automation. My proficiency encompasses a wide array of Salesforce functionalities, including Flows, Apex Classes, and Apex Triggers, Visualforce Basics, SOSL ans SOQL Queries, Lightning Web Components (LWC).
+                        I have completed 15 superbadges on Salesforce Trailhead. <br>Checkout my Salesforce Trailhead profile :
+                    </p>
+                </div>
+                <div class="skill-btn-container">
+               
+                <a href="https://www.salesforce.com/trailblazer/aayushpatle" target="_blank"><button class="skill-btn skill-tb"></button></a>
+            </div>
+            </div>
+    
+            <!-- Skill 2 -->
+            <div class="skill-card front-end">
+                <div class="skill-header">
+                    <p id="skill-feh">Front-end Web Development</p>
+                </div>
+                <div class="skill-logo">
+                    <img class="skill-pic" src="webdev.jpg" alt="">
+                </div>
+                <div class="skill-descBox">
+                    <p class="skill-desc">As a fresher in frontend web development and web designing, I specialize in crafting, engaging and building responsive user interfaces. With expertise in HTML, CSS, Bootstrap framework, and JavaScript, I create visually appealing and functional websites. Soon, I'll be diving into React js framework to further enhance my skills and build dynamic, interactive web applications. I am dedicated to staying updated with the latest web development trends and best practices.</p>
+                </div>
+                <div class="skill-btn-container"></div>
+            </div>
+            
+            <!-- Skill 3 -->
+            <div class="skill-card problem-solving">
+                <div class="skill-header"><p>Problem Solving</p></div>
+                <div class="skill-logo">
+                    <img class="skill-pic" src="https://static.vecteezy.com/system/resources/thumbnails/015/561/376/small/idea-solution-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg" alt="">
+                </div>
+                <div class="skill-descBox">
+                    <p class="skill-desc" style="margin-bottom: 0;">
+                        Within my skill set, I prioritize problem-solving, leveraging Java as my primary programming language. With expertise in data structures like Arrays, strings, HashMap, LinkedList, stack, and queue. I've successfully solved over 150 coding problems across some platforms like LeetCode, I am a 5-star coder on HackerRank in Java problem solving . Combining analytical thinking with systematic approaches, I excel in crafting efficient solutions to complex problems. <br>Checkout my Profile :
+                    </p>
+                    
+                </div>
+                <div class="skill-btn-container">
+                    
+                    <a href="https://leetcode.com/__aayush_01/" target="_blank"><button class="skill-btn skill-lc"></button></a><br>
+                    <a href="https://www.hackerrank.com/profile/aayushpatle01" target="_blank"><button class="skill-hk skill-btn"></button></a>
+                </div> 
+            </div>
+    
+            <!-- Skill 4 -->
+            <div class="skill-card soft-skills">
+                <div class="skill-header"><p>Soft Skills</p></div>
+                <div class="skill-logo">
+                    <img class="skill-pic" src="softskill.jpg" alt="">
+                </div>
+                <div class="skill-descBox">
+                    <p class="skill-desc">My skill set encompasses essential soft and interpersonal skills, emphasizing effective communication, teamwork, and problem-solving. I prioritize empathy and understanding to foster positive relationships and collaboration. I navigate diverse environments with adaptability and resolve conflicts constructively. With strong leadership qualities, I empower teams to achieve common objectives. Committed to continuous growth, I contribute positively to team dynamics and organizational success.</p>
+                </div>
+                <div class="skill-btn-container"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+    <br><br>
+    <a name="projects"><hr style="width: 50%;"></a>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+    <div class="project">
+    <header><p class="proj-heading">Projects</p></header>
+    <div class="proj-container">
+        
+        
+        <!-- Project 1 -->
+        <div class="proj-card">
+            <div class="proj-image">
+                <img class="proj-img" src="https://complainthub.in/wp-content/uploads/2022/11/Myntra-logo.png" alt="">
+        </div>
+        <div class="proj-lower-div">
+            <div class="proj-header"><p>Mynta Clone</p></div>
+            <div class="proj-desc">
+               It is a clone website of the online Shopping Application Myntra built using HTML, CSS and Javascript</div>
+            </div>        
+            <a class="proj-click-btn" href="https://aayush-017868.github.io/Myntra-Clone/" target="_blank">
+                <button class="proj-choose">Click to open</button>
+            </a>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="proj-card project1">
+        <div class="proj-image">
+            <img class="proj-img" src="guessmynum.jpg" alt="">
+        </div>
+        <div class="proj-lower-div">
+            <div class="proj-header"><p>Guess My Number</p></div>
+            <div class="proj-desc">
+                It is a simple number guessing game where user guesses a number between a range of 0 to 100 and gets score accordingly.</div>
+            </div>        
+            <a class="proj-click-btn" href="https://aayush-017868.github.io/Guess-My-Number/" target="_blank">
+                <button class="proj-choose">Click to open</button>
+            </a>
+           
+         
+        </div>
+            
+    <!-- Project 2 -->
+    <div class="proj-card project2">
+        <div class="proj-image">
+            <img class="proj-img" src="countryflag.png" alt="">
+        </div>
+        <div class="proj-lower-div">
+            <div class="proj-header"><p>Country Flag</p></div>
+            <div class="proj-desc">
+                It is a country flag project where the flags of different countries are designed using purely HTML and CSS.</div>
+            </div>        
+            <a class="proj-click-btn" href="https://aayush-017868.github.io/Country-Flags/" target="_blank">
+                <button class="proj-choose">Click to open</button>
+            </a>
+    </div>
+
+
+    <!-- Project 3 -->
+    <div class="proj-card project3">
+        <div class="proj-image">
+            <img class="proj-img" src="calculator-app.png" alt="">
+        </div>
+        <div class="proj-lower-div">
+            <div class="proj-header"><p>Calculator</p></div>
+            <div class="proj-desc">
+                It is a simple calculator built using HTML and CSS and javascript.</div>
+            </div>        
+            <a class="proj-click-btn" href="https://aayush-017868.github.io/Calculator/" target="_blank">
+                <button class="proj-choose">Click to open</button>
+            </a>
+    </div>
+
+
+    <!-- Project 3 -->
+    <div class="proj-card project3">
+        <div class="proj-image">
+            <img class="proj-img" src="https://play-lh.googleusercontent.com/Vn9sIUPcCVihrxMATWR_MjCIFuc5quCw-R3UN8Rmoze7rgaBhHdmF2RqjX3x28EJoQ" alt="">
+        </div>
+        <div class="proj-lower-div">
+            <div class="proj-header"><p>Temperature Convertor</p></div>
+            <div class="proj-desc">
+                It is a temperature convertor that is built using HTML, CSS and Javascript.</div>
+            </div>        
+            <a class="proj-click-btn" href="https://aayush-017868.github.io/Temperature-Convertor/" target="_blank">
+                <button class="proj-choose">Click to open</button>
+            </a>
+    </div>
+</div>
+</div>
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
