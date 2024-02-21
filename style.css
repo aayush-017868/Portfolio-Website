@@ -163,9 +163,9 @@ h2.subheading {
   padding-bottom: 1rem;
 }
 .subheading {
-    font-size: 2rem;
-    font-weight: normal;
-    padding-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
 }
 
 .resume {
@@ -285,7 +285,6 @@ h2.subheading {
   width: 100%;
   display: block;
 }
-
 
 .inner-circle-front,
 .inner-circle-back {
@@ -611,9 +610,9 @@ a {
 /* SKILLS SECTION CODE ENDS HERE */
 
 /*-------------------------------------------------------------------------------*/
-*-------------------------------------------------------------------------------*/
-    /* PROJECT SECTION CODE STARTS HERE */
-    /* PROJECT SECTION CODE STARTS HERE */
+/*-------------------------------------------------------------------------------*/
+/* PROJECT SECTION CODE STARTS HERE */
+/* PROJECT SECTION CODE STARTS HERE */
 
 .project {
   display: flex;
@@ -639,6 +638,24 @@ a {
   align-items: center;
 }
 
+@media (max-width: 1234px) {
+  .proj-container {
+    height: 62rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 736px) {
+  .proj-container {
+    height: 95rem;
+  }
+}
+
+@media (max-width: 481px) {
+  .proj-container {
+    height: 195rem;
+  }
+}
 .proj-card {
   display: flex;
   flex-direction: column;
@@ -734,3 +751,138 @@ a {
 
 /* PROJECT SECTION CODE ENDS HERE */
 /* PROJECT SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* CONTACT SECTION CODE STARTS HERE */
+/* CONTACT SECTION CODE STARTS HERE */
+
+/* CONTACT SECTION CODE ENDS HERE */
+/* CONTACT SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+
+#contact {
+  background-color: #b0b7b6;
+  border-top-color: #186f6f;
+  color: #186f6f;
+  margin: 0;
+  padding: 1rem;
+  padding-bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  flex-wrap: wrap;
+}
+@media (max-width: 1128px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  .right{
+    padding: 1rem 0rem 0rem 4rem;
+  }
+}
+
+
+.left,
+.right {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+@media(max-width : 530px){
+    .left{
+        display: none;
+    }
+}
+
+.right {
+  flex-direction: column;
+  text-align: left;
+}
+
+.right h3,
+h4 {
+  color: #125151;
+  margin-bottom: 0;
+}
+
+.right p {
+  margin-top: 0.5rem;
+}
+
+.bottom-icons {
+  margin-top: 1rem;
+}
+
+.bottom-icons a {
+  font-size: 1.5rem;
+  color: #186f6f;
+}
+
+.bottom-icons i {
+  margin-right: 0.75rem;
+}
+
+.form {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.form input,
+textarea {
+  padding-left: 1rem;
+}
+
+.form input,
+button {
+  height: 2.3rem;
+}
+
+.form * {
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  outline: none;
+}
+
+#subject {
+  grid-column: 1 / span 2;
+}
+
+#message {
+  grid-column: 1 / span 2;
+  resize: none;
+  padding: 15px;
+}
+
+#submit {
+  grid-column: 1 / span 2;
+  background-color: #fff;
+  color: #186f6f;
+}
+
+#submit:hover {
+  background-color: #736969;
+  color: white;
+}
+
+.copyright {
+  color: #eaf6f6;
+  font-size: 1rem;
+  padding: 1rem 0;
+  margin: 1rem 0 0 0;
+}
+/*-------------------------------------------------------------------------------*/
