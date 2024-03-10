@@ -12,7 +12,7 @@ Portfolio-Website
 ## Technologies
 | HTML | CSS | JavaScript | VS Code |
 |:---:|:---:|:---:|:---:|
-| ![HTML Logo](https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg) | ![CSS Logo]([https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg](https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png)) | ![JavaScript Logo](https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg) | ![VS Code Logo](https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg) |
+| ![HTML Logo](https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg) | ![CSS Logo](https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png)) | ![JavaScript Logo](https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg) | ![VS Code Logo](https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg) |
 
 ## About Me
 I am a passionate web-developer interested in software engineering, machine learning, and open-source contributions.
