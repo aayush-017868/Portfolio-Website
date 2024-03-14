@@ -225,7 +225,7 @@ h2.subheading {
   line-height: 1.5rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 62rem) {
   .image-sec {
     height: auto;
     width: auto;
@@ -394,72 +394,88 @@ a {
 /* EDUCATION SECTION CODE STARTS HERE */
 /* EDUCATION SECTION CODE STARTS HERE */
 
-.edu-heading {
+.education{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Heading for the main education, not related to any card */
+.edu-heading{
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
+  padding-left: 10rem;
 }
 
-.edu-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 40rem;
-  width: inherit;
-  justify-content: center;
-  gap: 2.5rem;
-  align-items: center;
+@media screen and (max-width: 600px) {
+  .edu-heading {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax values for smaller screens */
+  }
 }
 
+.edu-container{
+  /* Grid layout */
+  display: grid;
+  width: 30rem;
+  grid-template: 12rem 15rem 15rem / 20rem 20rem;
+  gap: 1.5rem;
+}
+
+.mca{
+  grid-area: 1/1/span 4/span 1;
+}
+.bsc{
+  grid-area: 1/2/2/3;
+} 
+.xii{
+  grid-area: 2/2/3/3;
+}
+.x{
+  grid-area: 3/2/4/3;
+} 
+
+.coursework > li{
+  padding-top: .7rem;
+}
 /* All css for salesforce educationset */
-.edu-card {
+.card{
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: flex-start;
   background-color: rgb(255, 255, 255);
-  border-radius: 0.8rem;
+  border-radius: .8rem;
   transition: transform 0.3s ease;
 }
 
-.edu-card:hover {
+/* .card:hover{
   transform: scale(1.1);
-}
+} */
 /*Styles the headings of each education*/
-.edu-header {
+.header{
   padding: 0rem 1rem;
   font-weight: 600;
   text-align: center;
   height: 5rem;
 }
-.edu-header > p {
+
+.header > p{
   margin: 0;
   padding: 1rem 0rem 0rem 0rem;
 }
 
-/*Styles the description container of each educaiton*/
-.edu-descBox {
-  height: 25rem;
-  text-align: left;
-}
-
 /*Targets all the description inside the education cards*/
-.edu-desc {
-  width: 200px;
+.desc{
+  width: 12.5rem;
   padding: 0rem 1rem;
   /* text-align: left; */
 }
 
-/* Class heading */
-.edu-cl {
-  text-align: center;
-  font-weight: 600;
-  margin-top: 0;
-}
+
+
 /* To make text bolder  */
-.edu-bolder {
-  font-weight: 600;
-}
+.bolder{font-weight: 600;}
+
 
 @media (max-width: 880px) {
   .education {
@@ -574,7 +590,7 @@ a {
 
 /*Salesforce*/
 .skill-tb {
-  background-image: url(trailhead.png);
+  background-image: url(assets/trailhead.webp);
 }
 .skill-sfbtn {
   display: flex;
@@ -591,11 +607,11 @@ a {
 /*Problem Solving*/
 /* Styling the buttons */
 .skill-lc {
-  background-image: url("leetcodeButton.png");
+  background-image: url("assets/leetcodeButton.webp");
 }
 
 .skill-hk {
-  background-image: url("HackerrankButton.png");
+  background-image: url("assets/HackerrankButton.webp");
 }
 .skill-btn {
   background-size: cover;
@@ -665,9 +681,11 @@ a {
   border-radius: 0.8rem;
   transition: transform 0.3s ease;
 }
-.proj-card {
+
+.proj-card:hover {
   transform: scale(1.1);
 }
+
 
 .proj-img {
   padding: 1rem 0rem;
@@ -785,11 +803,10 @@ a {
     flex-direction: column;
     /* align-items: center; */
   }
-  .right{
+  .right {
     padding: 1rem 0rem 0rem 4rem;
   }
 }
-
 
 .left,
 .right {
@@ -799,10 +816,10 @@ a {
   position: relative;
 }
 
-@media(max-width : 530px){
-    .left{
-        display: none;
-    }
+@media (max-width: 530px) {
+  .left {
+    display: none;
+  }
 }
 
 .right {
