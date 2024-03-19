@@ -1,22 +1,32 @@
-# Portfolio-Website
-# My GitHub Repository
+# My Portfolio Website 👋
 
-## Introduction
-This is my portfolio website.
+Welcome to the repository of my portfolio website! This website is a showcase of my work as a web developer.
 
-## Project
-Portfolio-Website
-(https://github.com/username/project-a](https://github.com/aayush-017868/Portfolio-Website/)
+## 🛠️ Built With
 
+- HTML
+- CSS
+- JavaScript
+- Developed in Visual Studio Code
 
-## Technologies
-| HTML | CSS | JavaScript | VS Code |
-|:---:|:---:|:---:|:---:|
-| ![HTML Logo](https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg) | ![CSS Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png=50x) | ![JavaScript Logo](https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg) | ![VS Code Logo](https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg) |
+## 🌐 Website Features
 
-## About Me
-I am a passionate web-developer interested in software engineering, machine learning, and open-source contributions.
+- **About Me**: A section about myself, my skills, and my background.
+- **Education**: Showcases my education.
+- **Skills**: Showcases my skills.
+- **Projects**: Showcases my projects with links to live demos and source code.
+- **Contact**: A form for visitors to contact me.
 
-## Contact
-- **Email**: aayushpatle01@gmail.com
-- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/aayush-patle-31878a225/)
+## 🚀 Getting Started
+
+To get a local copy up and running, follow these steps:
+
+1. Clone the repository
+2. Open `index.html` in your browser
+
+## 📫 How to Reach Me
+
+aayushpatle01@gmail.com
+
+Thank you for visiting my portfolio website repository. Enjoy exploring my work!
+
