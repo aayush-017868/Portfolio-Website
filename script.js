@@ -1,4 +1,28 @@
 // All the JavaScript functions are defined here
+//Typed Animation Function
+const textArray = ["Programmer..", "Developer..", "Learner.."]; // Add your strings here
+let arrayIndex = 0;
+let charIndex = 0;
+
+function typeAnimate() {
+  const span = document.querySelector('.typeAnimate');
+  
+  if(charIndex < textArray[arrayIndex].length) {
+    span.textContent += textArray[arrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeAnimate, 150); // You can adjust typing speed here
+  } else {
+    // Reset for next string
+    charIndex = 0;
+    setTimeout(() => {
+      span.textContent = '';
+      arrayIndex = (arrayIndex + 1) % textArray.length; // Loop back to first string after the last one
+      setTimeout(typeAnimate, 100); // Delay between strings
+    }, 600); // Delay before erasing the string
+  }
+}
+
+typeAnimate();
 
 
 
@@ -108,4 +132,30 @@ window.onclick = function(event) {
   document.getElementById("year").textContent = currentYear;
   
   
-    
+// Nigh Mode toggle button
+var totalSkills = document.getElementsByClassName('skill-card').length;
+var totalProjects = document.getElementsByClassName('proj-card').length;
+var totalEducation = document.getElementsByClassName('edu-card').length;
+var totalSeperator = document.getElementsByClassName('seperator').length;
+function toggleNightMode() {
+  //This is for body
+  document.body.classList.toggle('night-mode'); 
+  //This is for nav bar
+  document.querySelector('.nav').classList.toggle('skill-card-night');
+  // This is for skill cards
+  for(let i = 0; i < totalSkills; i++){
+    document.querySelectorAll('.skill-card')[i].classList.toggle('skill-card-night');
+  }
+  // This is for project cards
+  for(let i = 0; i < totalProjects; i++){
+    document.querySelectorAll('.proj-card')[i].classList.toggle('proj-card-night');
+  }  
+   // This is for education cards
+  for(let i = 0; i < totalSkills; i++){
+    document.querySelectorAll('.edu-card')[i].classList.toggle('edu-card-night');
+  }    
+   // This is for seperators
+  for(let i = 0; i < totalSeperator; i++){
+    document.querySelectorAll('.seperator')[i].classList.toggle('seperator-night');
+  }    
+}

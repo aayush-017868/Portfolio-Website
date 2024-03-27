@@ -5,31 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio Website</title>
 <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/nmp/typed.js@2.0.12"></script>
 <!-- <link rel="icon" href="./Favicon.png">
-<link rel="stylesheet" href="./responsive.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> -->
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> -->
 </head>
 <body>
-<div class="main">    
-<!-- This is our nav bar -->
-<div class="nav">
-    <!-- This is our name to be displayed on top left corner -->
-    <div class="name">
-        <a href="#" id="refreshbutton"><p>Aayush</p></a>
-    </div>
-    <!-- This is a set of options to be displayed from the  top  right corner -->
-    <div class="options">
-    <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        
-    </ul>
-</div>
-    <!-- This is a dropdown that will help in direct navigation to the sections -->
+    <div class="main">    
+        <label class="toggle" onchange="toggleNightMode()">
+            <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+            <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
+            <input type="checkbox" class="input">
+            <span class="slider"></span>
+          </label>
+
+        <!-- <button class="toggle-button" onclick="toggleNightMode()">Night</button> -->
+        <!-- This is our nav bar -->
+        <div class="nav">
+            <!-- This is our name to be displayed on top left corner -->
+            <div class="name">
+                <a href="#" id="refreshbutton"><p>Aayush</p></a>
+            </div>
+            <!-- This is a set of options to be displayed from the  top  right corner -->
+            <div class="options">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#connect">Connect</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                </ul>
+            </div>
+            <!-- This is a dropdown that will help in direct navigation to the sections -->
     <!-- It is basically used for opening the webpage in the small width devices -->
     <div class="dropdown">
         <div onclick="toggleDropdown()" class="dropdown-btn" >≡</div>
@@ -38,36 +48,39 @@
             <a href="#education">Education</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#connect">Connect</a>
             <a href="#contact">Contact</a>
-            <a href="./Resume.pdf" id="res-link">Download Resume</a>
         </div>
     </div>
 </div>
 
 
-    <!-- This is our Home Section Page  -->
-    <div class="container">
-        <!-- This is a box which will have name -->
-        <div class="front fading-text">
-            <h1>Hi
-                <span class="sm">,</span>
-                I am <br>
-                Aayush<span class="sm">.</span>
-            </h1>
-            <!-- This is the designation that will lie below the name -->
-            <h2 class="subheading">A Programmer and Web-Developer</h2>
-        </div>
-        <!-- This is the resume download button -->
-        <a class="proj-click-btn" href="./Resume.pdf" download="AayushResume.pdf" target="_blank">
-            <button class="proj-choose">Resume</button>
+<!-- This is our Home Section Page  -->
+<div class="container">
+    <!-- This is a box which will have name -->
+    <div class="front fading-text">
+        <h1>Hi
+            <span class="sm">,</span>
+            I am <br>
+            Aayush<span class="sm"></span>
+        </h1>
+        <!-- This is the designation that will lie below the name -->
+        <!-- <h2 class="subheading typeAnimate" onload="typeAnimation()";>A Programmer and Web-Developer</h2> -->
+        <h2 class="subheading">
+            <span class="typeAnimate"></span>
+        </h2>
+    </div>
+    <!-- This is the resume download button -->
+    <a class="proj-click-btn" href="./Resume.pdf" download="AayushResume.pdf" target="_blank">
+        <button class="proj-choose">Resume</button>
         </a>
     </div>
-
-    <hr style="width: 50%;">
+    
+    <hr class="seperator">
     
     <!-- This is About Section -->
     <section id="about">
-        <h2 class="subheading">About Me</h2>
+        <h2 class="all-heading">About Me</h2>
         <div class="about">
             <div class="proj-image-sec">
                 <div class="circle">
@@ -75,24 +88,9 @@
                         <div class="inner-circle-front">
                             <img class="dp d-block mx-auto mb-4" src="assets/myphoto-min.webp" alt="Picture of Aayush"> 
                         </div>
-                        <div class="inner-circle-back">
-                            <h3>Hello!<br>It's Aayush Patle</h3>
-                            <p>Thanks for visiting!</p>
-
-                        </div>
                     </div>
                 </div>
-                <div class="icons">
-                    <a href="https://www.linkedin.com/in/aayush-patle-31878a225/" target="_blank">
-                        <i class="fa-brands fa-linkedin linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=100006274249043" target="_blank">
-                        <i class="fa-brands fa-square-x-twitter twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/aayush-017868" target="_blank">
-                        <i class="fa-brands fa-square-github github" aria-hidden="true"></i>
-                    </a>
-                </div> 
+                
             </div>   
             <div class="about-text">
                 <p class="about-text-heading">
@@ -107,131 +105,81 @@
             </div>
         </div>
     </section>
-    <a name="education"><hr style="width: 50%;"></a>
-    
+
+    <a name="education"><hr class="seperator"></a>
+    <br>
+
     
     <!-- This is Education Section -->
     <!-- This is Education Section -->
-    <div class="education">
-        <header><p class="edu-heading">Education</p></header>
+    <div class="education">        
+        <header><p class="all-heading">Education</p></header>
         <div class="edu-container">
-    
+            
             <!-- Education 1 -->
-            <div class="card mca">
-                <div class="header"><p>Master of Computer Applications</p><hr>
-                <p class="session">2022-2024</p></div>
-                <!-- <div class="logo">
-                    <img class="lnct-pic" src="lnct.png" alt="">
-                </div> -->
-                <div class="descBox">
-                    <p class="desc">
-                        <p class="desc">
-                            I am Currently pursuing MCA from Lakshmi Narain College of Technology MCA, Bhopal. 
-                            <br><br>
-                            <span class="bolder">Current CGPA :</span> 
-                            8.67 <br><hr>
-                            <span class="bolder" style="padding-left: 1rem;">Coursework :</span> 
-                            <ul class="coursework">
-                                <li>C</li>
-                                <li>Java</li>
-                                <li>Python</li>
-                                <li>Operating Systems</li>
-                                <li>Networking</li>
-                                <li>IoT</li>
-                                <li>Artificial Intelligence</li>
-                                <li>Data Mining</li>
-                                <li>Distributed Systems</li>
-                                <li>Database Management</li>
-                                <li>Algorithm Design Analysis</li>
-                                <li>Software Engineering</li>
-                                <li>Cloud Computing</li>
-                                <li>Information Security</li>
-    
-                            </ul>
+            <div class="edu-card">
+                <div><p class="edu-header">Master of Computer Applications</p></div>
+                <div class="edu-descBox">
+                    <p class="edu-desc">
+                        <b>College : </b>Lakshmi Narain College of Technology, Bhopal <br>
+                        <b>CGPA : </b>8.62
                     </p>
-                </div>
-               
-                <!-- <a href="https://www.salesforce.com/trailblazer/aayushpatle" target="_blank"><button class="btn tb"></button></a> -->
+                </div> 
             </div>
-            
-    
-            <!--Education 2 -->
-            <div class="card bsc">
-                <div class="bsc header">
-                    <p>B.Sc (Hons.) Physics</p><hr>
-                    <p class="session">2018-2021</p>
-                </div>
-                <!-- <div class="logo">
-                    <img class="bsc-pic" src="du.jpg" alt="">
-                </div> -->
-                <div class="descBox">
-                    <p class="desc">
-                      <span class="bolder">Institute : </span>Deshbandhu College, University of Delhi.
-                        <br>
-                        <span class="bolder">CGPA :</span> 
-                        8.014
+            <!-- Education 2 -->
+            <div class="edu-card">
+                <div><p class="edu-header">B.Sc(Hons) Physics</p></div>
+                <div class="edu-descBox">
+                    <p class="edu-desc">
+                        <b>College : </b>Deshbandhu College, Delhi University <br>
+                        <b>CGPA : </b>8.01
                     </p>
-                </div>
+                </div> 
             </div>
-            
-            <!--Education 3 -->
-            <div class="card schooling xii">
-                <div class="school header">
-                    <p>Class XII</p><hr>
-                    <p class="session">2018</p>
-                </div>
-                <div class="descBox">
-                    <div class="desc">
-                        <p> 
-                        <span class="bolder">Board :</span> Madhya Pradesh Board of Secondary Education <br>
-                        <span class="bolder">School :</span> Vivek Jyoti H.S. School
-                      <br>
-                        <span class="bolder">Percentage :</span> 88.80%</p>
-                    </div>
-                </div>
+            <!-- Education 2 -->
+            <div class="edu-card">
+                <div><p class="edu-header">Class XII</p></div>
+                <div class="edu-descBox">
+                    <p class="edu-desc">
+                        <b>School : </b>Vivek Jyoti H.S. School, Balaghat(MP) <br>
+                        <b>Percentage : </b>89.83%
+                    </p>
+                </div> 
             </div>
-    
-    
-            <div class="card schooling x">
-                <div class="school header">
-                    <p>Class X</p><hr>
-                    <p class="session">2016</p>
-                </div>
-                <div class="descBox">
-                    <div class="desc">
-                        <p> 
-                        <span class="bolder">Board :</span> Madhya Pradesh Board of Secondary Education <br>
-                        <span class="bolder">School :</span> Vivek Jyoti H.S. School
-                      <br>
-                        <span class="bolder">Percentage :</span> 89.83%</p>
-                    </div>
-                </div>
+            <!-- Education 2 -->
+            <div class="edu-card">
+                <div><p class="edu-header">Class X</p></div>
+                <div class="edu-descBox">
+                    <p class="edu-desc">
+                        <b>School : </b>Vivek Jyoti H.S. School, Balaghat(MP) <br>
+                        <b>Percentage : </b>88.80%
+                    </p>
+                </div> 
             </div>
         </div>
         </div>
-    </div>
-
-
+    
     <br>
+    
     <br>
-    <a name="skills"><hr style="width: 50%;"></a>
+    <a name="skills"> <hr class="seperator"></a>
     <!-- This is Education Section -->
     <!-- This is Education Section -->
-
-
+    <br>
+    
     <!-- Skills Section -->
     <!-- Skills Section -->
     <div class="skills">
-
-
-        <header><p class="skills-heading">Skills</p></header>
+        
+        
+        <header><p class="all-heading">Skills</p></header>
         <div class="skills-container">
-    
+            
             <!-- Skill 1 -->
             <div class="skill-card salesforce">
                 <div class="skill-header"><p>Salesforce</p></div>
                 <div class="skill-logo">
-                    <img class="skill-pic" src="https://www.salesforce.com/news/wp-content/uploads/sites/3/2021/05/Salesforce-logo.jpg" alt="">
+                    <img class="skill-pic" src="/assets/skills/Salesforce.png" alt="">
                 </div>
                 <div class="skill-descBox">
                     <p class="skill-desc">I bring a comprehensive skill set and extensive experience in Salesforce Administration, Salesforce Development, Data Management, Workflow Automation. My proficiency encompasses a wide array of Salesforce functionalities, including Flows, Apex Classes, and Apex Triggers, Visualforce Basics, SOSL ans SOQL Queries, Lightning Web Components (LWC).
@@ -239,18 +187,17 @@
                     </p>
                 </div>
                 <div class="skill-btn-container">
-               
-                <a href="https://www.salesforce.com/trailblazer/aayushpatle" target="_blank"><button class="skill-btn skill-tb"></button></a>
+                    <a href="https://www.salesforce.com/trailblazer/aayushpatle" target="_blank"><button class="skill-btn skill-tb"></button></a>
+                </div>
             </div>
-            </div>
-    
+            
             <!-- Skill 2 -->
             <div class="skill-card front-end">
                 <div class="skill-header">
-                    <p id="skill-feh">Front-end Web Development</p>
+                    <p id="skill-feh">Web Development</p>
                 </div>
                 <div class="skill-logo">
-                    <img class="skill-pic" src="assets/webdev.webp" alt="">
+                    <img class="skill-pic" src="assets/skills/webdev.png" alt="">
                 </div>
                 <div class="skill-descBox">
                     <p class="skill-desc">As a fresher in frontend web development and web designing, I specialize in crafting, engaging and building responsive user interfaces. With expertise in HTML, CSS, Bootstrap framework, and JavaScript, I create visually appealing and functional websites. Soon, I'll be diving into React js framework to further enhance my skills and build dynamic, interactive web applications. I am dedicated to staying updated with the latest web development trends and best practices.</p>
@@ -262,7 +209,7 @@
             <div class="skill-card problem-solving">
                 <div class="skill-header"><p>Problem Solving</p></div>
                 <div class="skill-logo">
-                    <img class="skill-pic" src="https://static.vecteezy.com/system/resources/thumbnails/015/561/376/small/idea-solution-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg" alt="">
+                    <img class="skill-pic" src="/assets/skills/problem-solving.png" alt="">
                 </div>
                 <div class="skill-descBox">
                     <p class="skill-desc" style="margin-bottom: 0;">
@@ -281,7 +228,7 @@
             <div class="skill-card soft-skills">
                 <div class="skill-header"><p>Soft Skills</p></div>
                 <div class="skill-logo">
-                    <img class="skill-pic" src="assets/softskill.webp" alt="">
+                    <img class="skill-pic" src="assets/skills/softskill.png" alt="">
                 </div>
                 <div class="skill-descBox">
                     <p class="skill-desc">My skill set encompasses essential soft and interpersonal skills, emphasizing effective communication, teamwork, and problem-solving. I prioritize empathy and understanding to foster positive relationships and collaboration. I navigate diverse environments with adaptability and resolve conflicts constructively. With strong leadership qualities, I empower teams to achieve common objectives. Committed to continuous growth, I contribute positively to team dynamics and organizational success.</p>
@@ -293,34 +240,33 @@
     <!-- Skills Section -->
     <!-- Skills Section -->
     <br><br>
-    <a name="projects"><hr style="width: 50%;"></a>
-
+    <a name="projects"><hr class="seperator"></a>
+    <br>
     <!-- Projects Section -->
     <!-- Projects Section -->
     <div class="project">
-    <header><p class="proj-heading">Projects</p></header>
-    <div class="proj-container">
+        <header><p class="all-heading">Projects</p></header>
         
-        
-        <!-- Project 1 -->
-        <div class="proj-card">
-            <div class="proj-image">
-                <img class="proj-img" src="https://complainthub.in/wp-content/uploads/2022/11/Myntra-logo.png" alt="">
-        </div>
-        <div class="proj-lower-div">
-            <div class="proj-header"><p>Mynta Clone</p></div>
-            <div class="proj-desc">
-               It is a clone website of the online Shopping Application Myntra built using HTML, CSS and Javascript</div>
-            </div>        
-            <a class="proj-click-btn" href="https://aayush-017868.github.io/Myntra-Clone/" target="_blank">
-                <button class="proj-choose">Click to open</button>
-            </a>
-    </div>
-
+        <div class="proj-container">
+            <!-- Project 1 -->
+            <div class="proj-card">
+                <div class="proj-image">
+                    <img class="proj-img" src="https://complainthub.in/wp-content/uploads/2022/11/Myntra-logo.png" alt="">
+                </div>
+                <div class="proj-lower-div">
+                    <div class="proj-header"><p>Mynta Clone</p></div>
+                    <div class="proj-desc">
+                        It is a clone website of the online Shopping Application Myntra built using HTML, CSS and Javascript</div>
+                    </div>        
+                    <a class="proj-click-btn" href="https://aayush-017868.github.io/Myntra-Clone/" target="_blank">
+                        <button class="proj-choose">Click to open</button>
+                    </a>
+                </div>
+                
     <!-- Project 4 -->
     <div class="proj-card project1">
         <div class="proj-image">
-            <img class="proj-img" src="assets/guessmynum.webp" alt="">
+            <img class="proj-img" src="assets/projects/guessmynum.webp" alt="">
         </div>
         <div class="proj-lower-div">
             <div class="proj-header"><p>Guess My Number</p></div>
@@ -330,44 +276,44 @@
             <a class="proj-click-btn" href="https://aayush-017868.github.io/Guess-My-Number/" target="_blank">
                 <button class="proj-choose">Click to open</button>
             </a>
-           
-         
-        </div>
             
-    <!-- Project 2 -->
-    <div class="proj-card project2">
-        <div class="proj-image">
-            <img class="proj-img" src="assets/countryflag.webp" alt="">
+            
         </div>
-        <div class="proj-lower-div">
-            <div class="proj-header"><p>Country Flag</p></div>
-            <div class="proj-desc">
-                It is a country flag project where the flags of different countries are designed using purely HTML and CSS.</div>
-            </div>        
-            <a class="proj-click-btn" href="https://aayush-017868.github.io/Country-Flags/" target="_blank">
-                <button class="proj-choose">Click to open</button>
-            </a>
-    </div>
-
-
-    <!-- Project 3 -->
-    <div class="proj-card project3">
-        <div class="proj-image">
-            <img class="proj-img" src="assets/calculator-app.webp" alt="">
-        </div>
-        <div class="proj-lower-div">
-            <div class="proj-header"><p>Calculator</p></div>
-            <div class="proj-desc">
-                It is a simple calculator built using HTML and CSS and javascript.</div>
-            </div>        
-            <a class="proj-click-btn" href="https://aayush-017868.github.io/Calculator/" target="_blank">
-                <button class="proj-choose">Click to open</button>
-            </a>
-    </div>
-
-
-    <!-- Project 3 -->
-    <div class="proj-card project4">
+        
+        <!-- Project 2 -->
+        <div class="proj-card project2">
+            <div class="proj-image">
+                <img class="proj-img" src="assets/projects/countryflag.webp" alt="">
+            </div>
+            <div class="proj-lower-div">
+                <div class="proj-header"><p>Country Flag</p></div>
+                <div class="proj-desc">
+                    It is a country flag project where the flags of different countries are designed using purely HTML and CSS.</div>
+                </div>        
+                <a class="proj-click-btn" href="https://aayush-017868.github.io/Country-Flags/" target="_blank">
+                    <button class="proj-choose">Click to open</button>
+                </a>
+            </div>
+            
+            
+            <!-- Project 3 -->
+            <div class="proj-card project3">
+                <div class="proj-image">
+                    <img class="proj-img" src="assets/projects/calculator-app.webp" alt="">
+                </div>
+                <div class="proj-lower-div">
+                    <div class="proj-header"><p>Calculator</p></div>
+                    <div class="proj-desc">
+                        It is a simple calculator built using HTML, CSS and javascript.</div>
+                    </div>        
+                    <a class="proj-click-btn" href="https://aayush-017868.github.io/Calculator/" target="_blank">
+                        <button class="proj-choose">Click to open</button>
+                    </a>
+                </div>
+                
+                
+                <!-- Project 3 -->
+                <div class="proj-card project4">
         <div class="proj-image">
             <img class="proj-img" src="https://play-lh.googleusercontent.com/Vn9sIUPcCVihrxMATWR_MjCIFuc5quCw-R3UN8Rmoze7rgaBhHdmF2RqjX3x28EJoQ" alt="">
         </div>
@@ -379,70 +325,97 @@
             <a class="proj-click-btn" href="https://aayush-017868.github.io/Temperature-Convertor/" target="_blank">
                 <button class="proj-choose">Click to open</button>
             </a>
-    </div>
-
-
-    <!-- Project 5 -->
-    <div class="proj-card project5">
-        <div class="proj-image">
-            <img class="proj-img" src="assets/tin-dog.webp" alt="">
         </div>
-        <div class="proj-lower-div">
-            <div class="proj-header"><p>Tinder for Dogs</p></div>
-            <div class="proj-desc">
-                It is a tinder web app for dogs where different dogs can be matched up having multiple features</div>
-            </div>        
-            <a class="proj-click-btn" href="https://aayush-017868.github.io/Tinder-for-Dogs/" target="_blank">
-                <button class="proj-choose">Click to open</button>
-            </a>
+        
+        
+        <!-- Project 5 -->
+        <div class="proj-card project5">
+            <div class="proj-image">
+                <img class="proj-img" src="assets/projects/tin-dog.webp" alt="">
+            </div>
+            <div class="proj-lower-div">
+                <div class="proj-header"><p>Tinder for Dogs</p></div>
+                <div class="proj-desc">
+                    It is a tinder web app for dogs where different dogs can be matched up having multiple features</div>
+                </div>        
+                <a class="proj-click-btn" href="https://aayush-017868.github.io/Tinder-for-Dogs/" target="_blank">
+                    <button class="proj-choose">Click to open</button>
+                </a>
+            </div>
+        </div>
     </div>
-</div>
-</div>
+<br><br>
+<a name="connect"><hr class="seperator"></a>
+<br>
     <!-- Projects Section -->
     <!-- Projects Section -->
     
-    <!-- Contact Section -->
-    <!-- Contact Section -->
-
-    <div id="contact">
-        <h2 class="subheading">Contact</h2>
-        <div class="contact-container">
-            <div class="left">
-                <div class="form">
-                    <input type="text" id="name" placeholder="Name*" fdprocessedid="bk5q9g">
-                    <input type="text" placeholder="Email*" id="email" fdprocessedid="e6vp">
-                    <input type="text" placeholder="Subject" id="subject" fdprocessedid="m6i6ic">
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button id="submit" onclick="sendEmail()" fdprocessedid="8lz8og">Submit</button>
+    <div class="connect">
+        <header><p class="connect-heading">Connect</p></header>
+        <!-- Connection Section -->
+        <!-- Connection Section -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/aayush-patle-31878a225/" class="social-link" id="linkedin" target="_blank">
+                <img src="assets/connect/linkedin.webp" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://github.com/aayush-017868" class="social-link" id="github" target="_blank">
+                <img src="assets/connect/github.webp" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://www.hackerrank.com/profile/aayushpatle01" class="social-link" id="hackerrank" target="_blank">
+                <img src="assets/connect/hckrnk.webp" alt="HackerRank" class="social-icon">
+            </a>
+            <a href="https://leetcode.com/__aayush_01/" class="social-link" id="leetcode" target="_blank">
+                <img src="assets/connect/lc.webp" alt="LeetCode" class="social-icon">
+            </a>
+            <a href="https://youtube.com/@apxcreations5989?si=wfNJLpEh_CcfoBJ_" class="social-link" id="youtube" target="_blank">
+                <img src="assets/connect/ytLogo.png" alt="YouTube" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/__aayush_01/" class="social-link" id="instagram" target="_blank">
+                <img src="assets/connect/insta.webp" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100006274249043" class="social-link" id="facebook" target="_blank">
+                <img src="assets/connect/fbLogo.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://twitter.com/PatleAayush" class="social-link" id="x" target="_blank">
+                <img src="assets/connect/x.webp" alt="X" class="social-icon">
+            </a>
+        </div>
+        <BR></BR>
+        <!-- Connection Section -->
+        <!-- Connection Section -->
+        
+        
+        <!-- Contact Section -->
+        <!-- Contact Section -->
+        
+        <div id="contact">
+            <h2 style="color: #06bef3;" class="subheading">Contact</h2>
+            <div class="contact-container">
+                <div class="left">
+                    <div class="form">
+                        <input type="text" id="name" placeholder="Name*" fdprocessedid="bk5q9g">
+                        <input type="text" placeholder="Email*" id="email" fdprocessedid="e6vp">
+                        <input type="text" placeholder="Subject" id="subject" fdprocessedid="m6i6ic">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        <button id="submit" onclick="sendEmail()" fdprocessedid="8lz8og">Submit</button>
+                    </div>
                 </div>
-            </div>
-            <div class="right">
-                <div class="g1">
-                    <h3>Aayush Patle</h3>
-                    <p>Programmer &amp; Developer</p>
+                <div class="right">
+                    <div class="g1">
+                        <h3 style="color: #06bef3;" >Aayush Patle</h3>
+                        <p>Programmer &amp; Developer</p>
+                    </div>
+                    <div class="g2">
+                        <h4 style="color: #06bef3;" >Email</h4>
+                        <p>aayushpatle01@gmail.com</p>
+                    </div>
                 </div>
-                <div class="g2">
-                    <h4>Email</h4>
-                    <p>aayushpatle01@gmail.com</p>
-                </div>
-                <div class="bottom-icons">
-                    <a href="https://www.linkedin.com/in/aayush-patle-31878a225/" target="_blank">
-                        <i class="fa-brands fa-linkedin linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://twitter.com/iamrupambiswas4" target="_blank">
-                        <i class="fa-brands fa-square-x-twitter twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/aayush-017868" target="_blank">
-                        <i class="fa-brands fa-square-github github" aria-hidden="true"></i>
-                    </a>
-                </div> 
-            </div>
         </div>
         <p class="copyright">© Aayush Patle 2023 - <span id="year">2024</span></p>
     </div>
     <!-- Contact Section -->
     <!-- Contact Section -->
-
+    
 </div>
 <script src="script.js"></script>
 </body>

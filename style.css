@@ -16,7 +16,33 @@ a {
   display: flex;
   flex-direction: column;
 }
-
+/* CSS for all the headings on the webPage */
+.all-heading{
+  color: #49afaf;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+/* CSS for all hr seperators */
+.seperator{
+  border:none;
+  width: 60%;
+ height: 50px;
+ margin-top: 0;
+ border-bottom: 1px solid #fff;
+ box-shadow: 0 10px 20px -20px #333;
+ margin: -50px auto 10px; 
+}
+.seperator-night{
+  border:none;
+  width: 60%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #120606;
+  box-shadow: 0 10px 20px -20px #f1e0e0;
+  margin: -50px auto 10px;  
+}
 /*-------------------------------------------------------------------------------*/
 
 /* NAVIGATION BAR */
@@ -24,19 +50,24 @@ a {
 .nav {
   display: flex;
   background: linear-gradient(to left, rgb(206, 232, 255), rgb(218, 237, 253));
-
   flex-direction: row;
   width: 100%;
+  height: 3.5rem;
   margin: 0;
   padding: 0;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
+  left:0;
   box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  background: linear-gradient(to left, rgb(82, 156, 221), rgb(24, 125, 208));
+  color: white;
 }
-
+#refreshbutton{
+  color: white;
+}
 .name {
   margin: 0.2rem 3rem;
   font-size: large;
@@ -83,6 +114,7 @@ a {
 .dropdown-content {
   display: none;
   position: absolute;
+  right: 1px;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -102,9 +134,10 @@ a {
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
-@media (max-width: 992px) {
+@media (max-width: 62rem) {
   .dropdown {
     display: inline-block;
+    right: 0;
   }
 }
 
@@ -124,7 +157,6 @@ a {
 }
 
 .container {
-  background-color: aliceblue;
   border-radius: 0.5rem;
   padding-top: 0;
   margin: 1rem;
@@ -140,6 +172,7 @@ a {
   font-family: Arial;
   font-size: 10rem;
   animation: fadeIn 3s;
+  
 }
 .front {
   margin-top: 5rem;
@@ -147,20 +180,11 @@ a {
   flex-direction: column;
   justify-content: center;
   font-family: "poppins";
+
 }
 .front h1 {
   font-size: 4rem;
   line-height: 5rem;
-}
-h1 {
-  font-weight: bold;
-  opacity: 1;
-  transform: translateY(0);
-}
-h2.subheading {
-  font-size: 2rem;
-  font-weight: normal;
-  padding-bottom: 1rem;
 }
 .subheading {
   font-size: 2rem;
@@ -177,6 +201,27 @@ h2.subheading {
     display: block;
   }
 }
+
+.typeAnimate {
+  font-size: 3.5rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  color: #0ce1e1;
+  border-right: .2em solid;
+  white-space: nowrap;
+  overflow: hidden; 
+  margin: 0 auto;
+}
+
+.typeAnimate::after {
+  content: '';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 /* HOME SECTION CODE ENDS HERE */
 /* HOME SECTION CODE ENDS HERE */
 
@@ -195,7 +240,7 @@ h2.subheading {
   color: #3a6767;
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
-  font-weight: normal;
+  font-weight: bold;
   padding-bottom: 1rem;
 }
 
@@ -341,162 +386,67 @@ h2.subheading {
   transform: translateY(0);
 }
 
-/* This will style the icons */
+/* ABOUT SECTION CODE ENDS HERE */
+/* ABOUT SECTION CODE ENDS HERE */
 
-.icons {
-  width: 50%;
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* EDUCATION SECTION CODE STARTS HERE */
+/* EDUCATION SECTION CODE STARTS HERE */
+.education{
+  margin-bottom: 1rem;
+}
+.edu-heading{
+  color: #3a6767;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.edu-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
 }
-
-@media (max-width: 470px) {
-  .icons a {
-    font-size: 2rem;
-  }
+.edu-header{
+  font-weight: bold;
+  margin: 1rem .5rem 0rem 0.5rem;
 }
-
-.icons a {
-  font-size: 2.5rem;
-  color: #186f6f;
-}
-a {
-  text-decoration: none;
-}
-.icons i {
-  margin: 1rem;
-}
-
-.fa-brands,
-.fab {
-  font-weight: 400;
-}
-
-.fa-brands,
-.fab {
-  font-family: "Font Awesome 6 Brands";
-}
-
-@media (max-width: 768px) {
-  .about-text {
-    width: 100%;
-    text-align: justify;
-    margin: 0;
-  }
-}
-
-/* ABOUT SECTION CODE ENDS HERE */
-/* ABOUT SECTION CODE ENDS HERE */
-
-/*-------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------*/
-
-/* EDUCATION SECTION CODE STARTS HERE */
-/* EDUCATION SECTION CODE STARTS HERE */
-
-.education{
+.edu-card{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-/* Heading for the main education, not related to any card */
-.edu-heading{
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 500;
-  padding-left: 10rem;
-}
-
-@media screen and (max-width: 600px) {
-  .edu-heading {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax values for smaller screens */
-  }
-}
-
-.edu-container{
-  /* Grid layout */
-  display: grid;
-  width: 30rem;
-  grid-template: 12rem 15rem 15rem / 20rem 20rem;
-  gap: 1.5rem;
-}
-
-.mca{
-  grid-area: 1/1/span 4/span 1;
-}
-.bsc{
-  grid-area: 1/2/2/3;
-} 
-.xii{
-  grid-area: 2/2/3/3;
-}
-.x{
-  grid-area: 3/2/4/3;
-} 
-
-.coursework > li{
-  padding-top: .7rem;
-}
-/* All css for salesforce educationset */
-.card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 20rem;
   align-content: flex-start;
   background-color: rgb(255, 255, 255);
-  border-radius: .8rem;
+  border-radius: 0.2rem;
   transition: transform 0.3s ease;
 }
-
-/* .card:hover{
-  transform: scale(1.1);
-} */
-/*Styles the headings of each education*/
-.header{
-  padding: 0rem 1rem;
-  font-weight: 600;
-  text-align: center;
-  height: 5rem;
+.edu-card-night{
+  background-color: rgb(2, 23, 37);
+  color: aliceblue;
 }
-
-.header > p{
-  margin: 0;
-  padding: 1rem 0rem 0rem 0rem;
+.edu-desc{
+  padding: .1rem 1rem;
+  text-align: left;
 }
-
-/*Targets all the description inside the education cards*/
-.desc{
-  width: 12.5rem;
-  padding: 0rem 1rem;
-  /* text-align: left; */
-}
-
-
-
-/* To make text bolder  */
-.bolder{font-weight: 600;}
-
-
-@media (max-width: 880px) {
-  .education {
-    height: 70rem;
-  }
-}
-
-@media (max-width: 545px) {
-  .education {
-    height: 102rem;
-  }
-}
-
-/* .education{
-        display: flex;
-        flex-direction: column;
-    } */
 
 /* EDUCATION SECTION CODE ENDS HERE */
 /* EDUCATION SECTION CODE ENDS HERE */
 
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/* TECHNOLOGIES SECTION STARTS HERE */
+/* TECHNOLOGIES SECTION STARTS HERE */
+
+
+/* TECHNOLOGIES SECTION ENDS HERE */
+/* TECHNOLOGIES SECTION ENDS HERE */
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
 
@@ -509,6 +459,8 @@ a {
 }
 /* Heading for the main skill, not related to any card */
 .skills-heading {
+  color: #3a6767;
+  font-weight: bold;
   text-align: center;
   font-size: 2.5rem;
 }
@@ -523,8 +475,8 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: inherit;
-  width: inherit;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   gap: 2.5rem;
   align-items: center;
@@ -535,14 +487,18 @@ a {
   font-weight: 500;
 }
 /* All css for salesforce skillset */
-.skill-card {
+.skill-card{
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: flex-start;
   background-color: rgb(255, 255, 255);
-  border-radius: 0.8rem;
+  border-radius: 0.4rem;
   transition: transform 0.3s ease;
+}
+.skill-card-night{
+  background-color: rgb(2, 23, 37);
+  color: aliceblue;
 }
 
 .skill-card:hover {
@@ -590,7 +546,7 @@ a {
 
 /*Salesforce*/
 .skill-tb {
-  background-image: url(assets/trailhead.webp);
+  background-image: url(assets/Buttons/trailhead.webp);
 }
 .skill-sfbtn {
   display: flex;
@@ -607,11 +563,11 @@ a {
 /*Problem Solving*/
 /* Styling the buttons */
 .skill-lc {
-  background-image: url("assets/leetcodeButton.webp");
+  background-image: url("assets/buttons/leetcodeButton.webp");
 }
 
 .skill-hk {
-  background-image: url("assets/HackerrankButton.webp");
+  background-image: url("assets/buttons/HackerrankButton.webp");
 }
 .skill-btn {
   background-size: cover;
@@ -637,51 +593,36 @@ a {
 }
 /* Heading for the main education, not related to any card */
 .proj-heading {
+  color: #3a6767;
   text-align: center;
   font-size: 2.5rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
 .proj-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  height: 35rem;
-  width: inherit;
+  height: 100%;
+  width: 100%;
   justify-content: center;
-  gap: 3rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
-@media (max-width: 1234px) {
-  .proj-container {
-    height: 62rem;
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 736px) {
-  .proj-container {
-    height: 95rem;
-  }
-}
-
-@media (max-width: 481px) {
-  .proj-container {
-    height: 195rem;
-  }
-}
 .proj-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: flex-start;
   background-color: rgb(255, 255, 255);
-  border-radius: 0.8rem;
+  border-radius: 0.4rem;
   transition: transform 0.3s ease;
 }
-
+.proj-card-night{
+  background-color: rgb(2, 23, 37);
+  color: aliceblue;
+}
 .proj-card:hover {
   transform: scale(1.1);
 }
@@ -693,7 +634,7 @@ a {
   width: 9rem;
 }
 .proj-image {
-  border-radius: ;
+  border-radius: 3rem;
   width: 9rem;
 }
 .proj-header {
@@ -745,7 +686,7 @@ a {
   vertical-align: baseline;
   width: auto;
   box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  z-index: 1;
 }
 
 .proj-choose:hover {
@@ -772,7 +713,47 @@ a {
 
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
+/* CONNECT SECTION CODE STARTS HERE */
+/* CONNECT SECTION CODE STARTS HERE */
+.connect-heading{
+  color: #3a6767;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
+.social-link {
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue; /* Change to preferred color */
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  width: 3rem;
+  height: 3rem;
+}
+/* CONNECT SECTION CODE ENDS HERE */
+/* CONNECT SECTION CODE ENDS HERE */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
 /* CONTACT SECTION CODE STARTS HERE */
 /* CONTACT SECTION CODE STARTS HERE */
 
@@ -782,14 +763,17 @@ a {
 /*-------------------------------------------------------------------------------*/
 
 #contact {
-  background-color: #b0b7b6;
-  border-top-color: #186f6f;
-  color: #186f6f;
+  background-color: #1a1c1c;
+  border-top-color: #0ce1e1;
   margin: 0;
   padding: 1rem;
   padding-bottom: 0;
   font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
+.subheading{color: #0ce1e1; font-weight: bold;}
 
 .contact-container {
   display: flex;
@@ -811,6 +795,7 @@ a {
 .left,
 .right {
   width: 40%;
+  color: #0ce1e1;
   display: flex;
   justify-content: center;
   position: relative;
@@ -903,3 +888,132 @@ button {
   margin: 1rem 0 0 0;
 }
 /*-------------------------------------------------------------------------------*/
+/* Night Mode toggle button */
+
+.night-mode {
+  background: linear-gradient(360deg, #074e65, #100000, #100000);
+  background-size: 180% 180%;
+  color: rgb(14, 129, 229);
+  animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+.toggle{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 17px;
+  width: 3rem;
+  height: .9rem;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
+}
+@keyframes rotate {
+ 
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
