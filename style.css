@@ -693,11 +693,11 @@ h2.subheading {
 /*Problem Solving*/
 /* Styling the buttons */
 .skill-lc {
-  background-image: url(assets/buttons/leetcodeButton.webp);
+  background-image: url(assets/Buttons/leetcodeButton.webp);
 }
 
 .skill-hk {
-  background-image: url(assets/buttons/HackerrankButton.webp);
+  background-image: url(assets/Buttons/HackerrankButton.webp);
 }
 .skill-btn {
   background-size: cover;
