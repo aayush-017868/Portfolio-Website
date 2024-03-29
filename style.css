@@ -1,10 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+html{
+  scroll-behavior: smooth;
+}
 body {
-  background-color: aliceblue;
   text-align: center;
+  background: linear-gradient(
+    -30deg,
+    rgb(193, 220, 241),
+    rgb(213, 233, 251),
+    rgb(228, 232, 235),
+    aliceblue
+  );
+  background-size: 400% 400%;
+  /* background-position: center; */
+  animation: gradient-animation 12s ease infinite;
 }
 * {
   font-family: "Montserrat", sans-serif;
+  font-family: "Recursive", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0.5, "MONO" 0;
   font-optical-sizing: auto;
   /* background-color: antiquewhite; */
 }
@@ -17,7 +34,7 @@ a {
   flex-direction: column;
 }
 /* CSS for all the headings on the webPage */
-.all-heading{
+.all-heading {
   color: #49afaf;
   text-align: center;
   font-size: 2.5rem;
@@ -25,31 +42,43 @@ a {
   margin-bottom: 1.5rem;
 }
 /* CSS for all hr seperators */
-.seperator{
-  border:none;
+.seperator {
+  border: none;
   width: 60%;
- height: 50px;
- margin-top: 0;
- border-bottom: 1px solid #fff;
- box-shadow: 0 10px 20px -20px #333;
- margin: -50px auto 10px; 
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 10px 20px -20px #333;
+  margin: -50px auto 10px;
 }
-.seperator-night{
-  border:none;
+.seperator-night {
+  border: none;
   width: 60%;
   height: 50px;
   margin-top: 0;
   border-bottom: 1px solid #120606;
   box-shadow: 0 10px 20px -20px #f1e0e0;
-  margin: -50px auto 10px;  
+  margin: -50px auto 10px;
 }
+/* Animation for bg  */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /*-------------------------------------------------------------------------------*/
 
 /* NAVIGATION BAR */
 /* NAVIGATION BAR */
 .nav {
   display: flex;
-  background: linear-gradient(to left, rgb(206, 232, 255), rgb(218, 237, 253));
   flex-direction: row;
   width: 100%;
   height: 3.5rem;
@@ -59,23 +88,33 @@ a {
   align-items: center;
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  background: linear-gradient(to left, rgb(82, 156, 221), rgb(24, 125, 208));
+  background: linear-gradient(
+    50deg,
+    rgb(44, 128, 201),
+    #65a5dd,
+    rgb(18, 120, 205),
+    #0073ff
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
+  /* overflow: hidden; */
   color: white;
 }
-#refreshbutton{
+#refreshbutton {
   color: white;
 }
 .name {
   margin: 0.2rem 3rem;
   font-size: large;
+  font-weight: 700;
   padding: 0;
 }
 
 /*This code is for list of options in the nav bar aligned horizontally*/
-@media (max-width: 992px) {
+@media (max-width: 77rem) {
   .options {
     display: none;
   }
@@ -88,12 +127,13 @@ a {
 .options li {
   list-style: none;
   display: inline-block;
-  margin: 0 1.75rem 0 1.75rem;
+  margin: 0 1rem 0 1rem;
 }
 
 .options li a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: white;
+  font-weight: -500;
 }
 
 /*This is the code for dropdown*/
@@ -134,7 +174,7 @@ a {
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
-@media (max-width: 62rem) {
+@media (max-width: 77rem) {
   .dropdown {
     display: inline-block;
     right: 0;
@@ -150,7 +190,7 @@ a {
 /* HOME SECTION CODE STSRTS HERE */
 /* HOME SECTION CODE STSRTS HERE */
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .container {
     height: 90vh;
   }
@@ -172,7 +212,6 @@ a {
   font-family: Arial;
   font-size: 10rem;
   animation: fadeIn 3s;
-  
 }
 .front {
   margin-top: 5rem;
@@ -180,11 +219,38 @@ a {
   flex-direction: column;
   justify-content: center;
   font-family: "poppins";
-
 }
 .front h1 {
   font-size: 4rem;
   line-height: 5rem;
+  background: linear-gradient(
+    -30deg,
+    rgb(9, 131, 90),
+    #1270c2,
+    rgb(5, 67, 144),
+    #38c268
+  );
+  background-size: 400% 400%;
+  background-position: center;
+  animation: gradient-animation 12s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.text-animator {
+  background: linear-gradient(
+    -30deg,
+    rgb(9, 131, 90),
+    #1270c2,
+    rgb(123, 186, 238),
+    #38c268
+  );
+  background-size: 400% 400%;
+  background-position: center;
+  animation: gradient-animation 12s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .subheading {
   font-size: 2rem;
@@ -196,7 +262,7 @@ a {
   display: inline-block;
   height: 3rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   #res-link {
     display: block;
   }
@@ -205,21 +271,35 @@ a {
 .typeAnimate {
   font-size: 3.5rem;
   font-weight: bold;
+  text-align: center;
   padding-bottom: 1rem;
-  color: #0ce1e1;
-  border-right: .2em solid;
+  border-right: 0.2em solid;
   white-space: nowrap;
-  overflow: hidden; 
+  overflow: hidden;
   margin: 0 auto;
+  background-size: 400% 400%;
+  background-position: center;
+  animation: gradient-animation 12s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 500px) {
+  .typeAnimate {
+    font-size: 2.2rem;
+  }
 }
 
 .typeAnimate::after {
-  content: '';
+  content: "";
   animation: blink 1s infinite;
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* HOME SECTION CODE ENDS HERE */
@@ -251,10 +331,13 @@ h2.subheading {
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 76.5rem) {
   .about {
     flex-direction: column;
     align-items: center;
+  }
+  .about-text {
+    width: 100%;
   }
 }
 
@@ -265,7 +348,7 @@ h2.subheading {
   align-items: center;
   padding: 0;
   width: 50%;
-  text-align: justify;
+  text-align: center;
   margin-left: 2rem;
   line-height: 1.5rem;
 }
@@ -295,7 +378,7 @@ h2.subheading {
   height: 22rem;
   margin-bottom: 1.5rem;
 }
-@media (max-width: 470px) {
+@media (max-width: 29.4rem) {
   .circle {
     height: 15rem;
     width: 15rem;
@@ -318,21 +401,6 @@ h2.subheading {
 
 /* This is that circle which contains our image which will be displayed on the front side  */
 .inner-circle-front {
-  width: 50rem;
-  height: 50rem;
-  background-color: #3498db;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.dp {
-  height: auto;
-  width: 100%;
-  display: block;
-}
-
-.inner-circle-front,
-.inner-circle-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -342,25 +410,12 @@ h2.subheading {
   overflow: hidden;
 }
 
-.inner-circle-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.dp {
+  height: auto;
+  width: 100%;
+  display: block;
 }
 
-.inner-circle-back > h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}
 /*First Paragraph*/
 .about-text-heading {
   padding: 0;
@@ -394,10 +449,10 @@ h2.subheading {
 
 /* EDUCATION SECTION CODE STARTS HERE */
 /* EDUCATION SECTION CODE STARTS HERE */
-.education{
+.education {
   margin-bottom: 1rem;
 }
-.edu-heading{
+.edu-heading {
   color: #3a6767;
   font-weight: bold;
   text-align: center;
@@ -413,26 +468,24 @@ h2.subheading {
   gap: 2.5rem;
   align-items: center;
 }
-.edu-header{
+.edu-header {
   font-weight: bold;
-  margin: 1rem .5rem 0rem 0.5rem;
+  margin: 1rem 0.5rem 0rem 0.5rem;
 }
-.edu-card{
+.edu-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 20rem;
   align-content: flex-start;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0.2rem;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
   transition: transform 0.3s ease;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.1),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.1);
 }
-.edu-card-night{
-  background-color: rgb(2, 23, 37);
-  color: aliceblue;
-}
-.edu-desc{
-  padding: .1rem 1rem;
+.edu-desc {
+  padding: 0.1rem 1rem;
   text-align: left;
 }
 
@@ -444,7 +497,86 @@ h2.subheading {
 /* TECHNOLOGIES SECTION STARTS HERE */
 /* TECHNOLOGIES SECTION STARTS HERE */
 
+.temp-margin{
+  margin-top: 4rem;
+}
+.technology-container {
+  /* box-sizing: border-box; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 30px;
+  gap: 30px;
+}
 
+@media (max-width: 960px) {
+  .technology-container {
+    flex-direction: column;
+  }
+}
+
+.tech-card {
+  width: 60%;
+  height: 15rem;
+  max-width: 500px;
+  background: rgb(234, 238, 242);
+  box-shadow: 10px 4px 1.5rem rgba(2, 27, 76, 0.15);
+  border-radius: 1rem;
+  padding: 18px 36px;
+}
+@media (max-width: 768px) {
+  .tech-card {
+    max-width: 400px;
+    padding: 10px 36px;
+  }
+}
+@media (max-width: 588px) {
+  .tech-card {
+    max-width: 330px;
+    padding: 10px 36px;
+    height: auto;
+  }
+}
+.tech-header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  /* height: 5%; */
+}
+.tech-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech-tab {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0);
+  border: 1px solid rgba(242, 243, 244, 0.2);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 4px 4px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tech-logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 /* TECHNOLOGIES SECTION ENDS HERE */
 /* TECHNOLOGIES SECTION ENDS HERE */
 /*-------------------------------------------------------------------------------*/
@@ -487,7 +619,7 @@ h2.subheading {
   font-weight: 500;
 }
 /* All css for salesforce skillset */
-.skill-card{
+.skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -495,10 +627,8 @@ h2.subheading {
   background-color: rgb(255, 255, 255);
   border-radius: 0.4rem;
   transition: transform 0.3s ease;
-}
-.skill-card-night{
-  background-color: rgb(2, 23, 37);
-  color: aliceblue;
+  box-shadow: 6px -6px 10px 0 rgba(0, 0, 0, 0.1),
+    6px 6px 10px 0 rgba(255, 255, 255, 0.1);
 }
 
 .skill-card:hover {
@@ -517,7 +647,7 @@ h2.subheading {
 }
 /*Styles the description container of each skill*/
 .skill-descBox {
-  height: 28rem;
+  height: 16rem;
   text-align: left;
   /* text-align: center; */
 }
@@ -563,11 +693,11 @@ h2.subheading {
 /*Problem Solving*/
 /* Styling the buttons */
 .skill-lc {
-  background-image: url(assets/Buttons/leetcodeButton.webp);
+  background-image: url(assets/buttons/leetcodeButton.webp);
 }
 
 .skill-hk {
-  background-image: url(assets/Buttons/HackerrankButton.webp);
+  background-image: url(assets/buttons/HackerrankButton.webp);
 }
 .skill-btn {
   background-size: cover;
@@ -592,6 +722,7 @@ h2.subheading {
   flex-wrap: wrap;
 }
 /* Heading for the main education, not related to any card */
+/* Main heading of Project */
 .proj-heading {
   color: #3a6767;
   text-align: center;
@@ -599,7 +730,7 @@ h2.subheading {
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
-
+/* This contains all the cards of project */
 .proj-container {
   display: flex;
   flex-wrap: wrap;
@@ -609,51 +740,89 @@ h2.subheading {
   gap: 1.5rem;
   align-items: center;
 }
-
+/* This targets all the project cards  */
 .proj-card {
   display: flex;
   flex-direction: column;
+  width: 15rem;
   align-items: center;
   align-content: flex-start;
   background-color: rgb(255, 255, 255);
   border-radius: 0.4rem;
   transition: transform 0.3s ease;
+  box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.1),
+    6px 6px 10px 0 rgba(255, 255, 255, 0.1);
 }
-.proj-card-night{
-  background-color: rgb(2, 23, 37);
-  color: aliceblue;
-}
+/* This targets project cards when they are hovered */
 .proj-card:hover {
   transform: scale(1.1);
 }
 
-
+/* Targets the div inside which the project image is present in the project card */
+.proj-image-box {
+  width: 100%;
+  height: 9.25rem;
+  overflow: hidden;
+}
+/* Targets the project image present in the project card */
 .proj-img {
   padding: 1rem 0rem;
   height: 7rem;
   width: 9rem;
 }
-.proj-image {
-  border-radius: 3rem;
-  width: 9rem;
-}
+
+/* Targets the name of project */
 .proj-header {
+  height: 1.5rem;
   font-weight: 600;
   text-align: center;
   padding-bottom: 0.3rem;
 }
+/* Targets the p tag of name of project header */
 .proj-header > p {
   margin: 0;
 }
+/* Targets the tool box that shows the technologies used for the project */
+.tool-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.8rem 0rem 0.5rem 0rem;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --glow-color: hsl(201, 85%, 68%);
+}
+/* Targets the small buttons having name of the technologies used */
+.tool-btn {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--glow-color);
+  border: 1px solid var(--glow-color);
+  background-color: transparent;
+  padding: 2px 0.5rem;
+  border-radius: 0.8rem;
+  user-select: none;
+  box-shadow: inset 0px 0px 0.1rem 0px var(--glow-color),
+    0px 0px 0.2rem 0px var(--glow-color);
+}
+/* Targets the box where project description is written */
 .proj-desc {
   margin: 0;
   width: 10rem;
-  height: 9rem;
-  padding: 0rem 1rem 0rem 1.8rem;
+  height: 10rem;
+  padding: 1rem 1rem 0rem 1.8rem;
+  text-align: left;
 }
-
+/* Targets the button to be clicked to view project */
 .proj-click-btn {
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem 1rem 0rem;
+  height: 3rem;
 }
 
 /* Button Properties */
@@ -662,40 +831,34 @@ h2.subheading {
   background-clip: padding-box;
   background-color: #00a7fa;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
+  border-radius: 0.5rem;
   color: #fff;
   cursor: pointer;
-  display: inline-flex;
   font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
     Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
   margin: 0;
   min-height: 3rem;
-  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  padding: 0 1.4rem;
   position: relative;
-  text-decoration: none;
   transition: all 250ms;
-  user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
-  box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-
+/* Button Properties after hovered */
 .proj-choose:hover {
   background-color: black;
 }
 .button-5:hover,
 .button-5:focus {
   background-color: #fb8332;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 0.75rem;
 }
 
 .button-5:hover {
@@ -715,14 +878,14 @@ h2.subheading {
 /*-------------------------------------------------------------------------------*/
 /* CONNECT SECTION CODE STARTS HERE */
 /* CONNECT SECTION CODE STARTS HERE */
-.connect-heading{
+.connect-heading {
   color: #3a6767;
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
-.social-links {
+.social-links{
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -757,11 +920,6 @@ h2.subheading {
 /* CONTACT SECTION CODE STARTS HERE */
 /* CONTACT SECTION CODE STARTS HERE */
 
-/* CONTACT SECTION CODE ENDS HERE */
-/* CONTACT SECTION CODE ENDS HERE */
-
-/*-------------------------------------------------------------------------------*/
-
 #contact {
   background-color: #1a1c1c;
   border-top-color: #0ce1e1;
@@ -769,11 +927,15 @@ h2.subheading {
   padding: 1rem;
   padding-bottom: 0;
   font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
+
   left: 0;
   right: 0;
+  bottom: 0;
 }
-.subheading{color: #0ce1e1; font-weight: bold;}
+.subheading {
+  color: #0ce1e1;
+  font-weight: bold;
+}
 
 .contact-container {
   display: flex;
@@ -781,7 +943,7 @@ h2.subheading {
   position: relative;
   flex-wrap: wrap;
 }
-@media (max-width: 1128px) {
+@media (max-width: 1180px) {
   .contact-container {
     display: flex;
     flex-direction: column;
@@ -887,14 +1049,20 @@ button {
   padding: 1rem 0;
   margin: 1rem 0 0 0;
 }
+
+/* CONTACT SECTION CODE ENDS HERE */
+/* CONTACT SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
 /* Night Mode toggle button */
 
 .night-mode {
-  background: linear-gradient(360deg, #074e65, #100000, #100000);
-  background-size: 180% 180%;
-  color: rgb(14, 129, 229);
-  animation: gradient-animation 6s ease infinite;
+  /* color: rgb(14, 129, 229); */
+  background: linear-gradient(-30deg, #074e65, #100000, #000a10, #100000);
+  background-size: 400% 400%;
+  background-position: center;
+  animation: gradient-animation 15s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -909,7 +1077,20 @@ button {
   }
 }
 
-.toggle{
+/* Card Properties for Night mode */
+.night-card {
+  background-color: rgb(2, 23, 37);
+  background-color: transparent;
+  color: aliceblue;
+}
+/* Border properties for night mode */
+.border-night {
+  border: 2px solid var(--glow-color);
+  box-shadow: inset 0px 0px 0em 0px var(--glow-color),
+    0px 0px 0.8rem 0px var(--glow-color);
+}
+
+.toggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -919,8 +1100,8 @@ button {
   cursor: pointer;
   z-index: 1000;
   font-size: 17px;
-  width: 3rem;
-  height: .9rem;
+  width: 2.8rem;
+  height: 0.9rem;
 }
 
 .toggle input {
@@ -936,8 +1117,8 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #73C0FC;
-  transition: .4s;
+  background-color: #73c0fc;
+  transition: 0.4s;
   border-radius: 30px;
 }
 
@@ -951,7 +1132,7 @@ button {
   bottom: 2px;
   z-index: 2;
   background-color: #e8e8e8;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .sun svg {
@@ -964,7 +1145,7 @@ button {
 }
 
 .moon svg {
-  fill: #73C0FC;
+  fill: #73c0fc;
   position: absolute;
   top: 5px;
   left: 5px;
@@ -973,11 +1154,11 @@ button {
   height: 24px;
 }
 
-/* .switch:hover */.sun svg {
+/* .switch:hover */
+.sun svg {
   animation: rotate 15s linear infinite;
 }
 @keyframes rotate {
- 
   0% {
     transform: rotate(0);
   }
@@ -987,7 +1168,8 @@ button {
   }
 }
 
-/* .switch:hover */.moon svg {
+/* .switch:hover */
+.moon svg {
   animation: tilt 5s linear infinite;
 }
 

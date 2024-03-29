@@ -1,6 +1,6 @@
 // All the JavaScript functions are defined here
 //Typed Animation Function
-const textArray = ["Programmer..", "Developer..", "Learner.."]; // Add your strings here
+const textArray = ["A Programmer..", "Developer..", "Learner.."]; // Add your strings here
 let arrayIndex = 0;
 let charIndex = 0;
 
@@ -23,30 +23,10 @@ function typeAnimate() {
 }
 
 typeAnimate();
-
-
-
-//To refresh the page and reach the top on clicking on "Aayush"
-document.addEventListener("DOMContentLoaded", function() {
-    const scrollToTopButton = document.getElementById("scrollToTop");
-  
-    scrollToTopButton.addEventListener("click", function(event) {
-      event.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-  
-      setTimeout(function() {
-        window.location.reload();
-      }, 1000);
-    });
-  });
+ 
   
   
-  
-  //To make the three dots section and its options available and function
-
+//To make the three dots section and its options available and function
 function toggleDropdown() {
   var dropdownContent = document.getElementById("dropdownContent");
   dropdownContent.classList.toggle("show");
@@ -63,10 +43,7 @@ window.onclick = function(event) {
     }
   }
 };
-
-  
-  
-  
+ 
   //To put animation to the about section
   document.addEventListener("DOMContentLoaded", function() {
     const paragraphs = document.querySelectorAll(".hidden-paragraph");
@@ -92,27 +69,6 @@ window.onclick = function(event) {
   
   
   
-//   // To redirect to the calculator project page
-//   function redirecttoCalculator() {
-//       window.location.href = "https://iamAayushbiswas.github.io/Calculator/";
-//   }
-  
-//   // To redirect to the flipkart clone project project page
-//   function redirecttoFlipkart() {
-//       window.location.href = "https://iamAayushbiswas.github.io/Flipkart-Clone-Project/";
-//   }
-  
-//   // To redirect to the currency converter project project page
-//   function redirecttoCurrencyConverter() {
-//     window.location.href = "https://iamAayushbiswas.github.io/CurrencyConverter/";
-//   }
-  
-//   // To redirect to the Bhagvadgita Search Engine project project page
-//   function redirecttoBhagvadgita() {
-//     window.location.href = "https://iamAayushbiswas.github.io/BhagvadGeetaSearchEngine/";
-//   }
-  
-  
   //To send mail
   function sendEmail() {
       var emailAddress = "aayushpatle01@gmail.com";
@@ -128,34 +84,56 @@ window.onclick = function(event) {
   
   
   // To put the current year in the copyright
-  var currentYear = new Date().getFullYear();
-  document.getElementById("year").textContent = currentYear;
+  // var currentYear = new Date().getFullYear();
+  // document.getElementById("year").textContent = currentYear;
   
+  // const nightModeToggle = document.getElementsByClassName('toggle');
+  // nightModeToggle.checked = true;
   
 // Nigh Mode toggle button
-var totalSkills = document.getElementsByClassName('skill-card').length;
-var totalProjects = document.getElementsByClassName('proj-card').length;
-var totalEducation = document.getElementsByClassName('edu-card').length;
 var totalSeperator = document.getElementsByClassName('seperator').length;
+
+var totalEducation = document.getElementsByClassName('edu-card').length;
+
+var totalTechnologies = document.getElementsByClassName('tech-card').length;
+
+var totalTechTabs = document.getElementsByClassName('tech-tab').length;
+
+var totalSkills = document.getElementsByClassName('skill-card').length;
+
+var totalProjects = document.getElementsByClassName('proj-card').length;
+
 function toggleNightMode() {
   //This is for body
   document.body.classList.toggle('night-mode'); 
-  //This is for nav bar
-  document.querySelector('.nav').classList.toggle('skill-card-night');
+  // This is for seperators
+  for(let i = 0; i < totalSeperator; i++){
+   document.querySelectorAll('.seperator')[i].classList.toggle('seperator-night');
+  }    
+  // This is for education cards
+ for(let i = 0; i < totalEducation; i++){
+   document.querySelectorAll('.edu-card')[i].classList.toggle('night-card');
+   document.querySelectorAll('.edu-card')[i].classList.toggle('border-night');
+ }    
+ // This is for technology cards
+for(let i = 0; i < totalTechnologies; i++){
+  document.querySelectorAll('.tech-card')[i].classList.toggle('night-card');
+  document.querySelectorAll('.tech-card')[i].classList.toggle('border-night');
+}    
+ // This is for technology tabs
+for(let i = 0; i < totalTechTabs; i++){
+  document.querySelectorAll('.tech-tab')[i].classList.toggle('night-card');
+  document.querySelectorAll('.tech-tab')[i].classList.toggle('border-night');
+}    
   // This is for skill cards
   for(let i = 0; i < totalSkills; i++){
-    document.querySelectorAll('.skill-card')[i].classList.toggle('skill-card-night');
+    document.querySelectorAll('.skill-card')[i].classList.toggle('night-card');
+    document.querySelectorAll('.skill-card')[i].classList.toggle('border-night');
   }
   // This is for project cards
   for(let i = 0; i < totalProjects; i++){
-    document.querySelectorAll('.proj-card')[i].classList.toggle('proj-card-night');
+    document.querySelectorAll('.proj-card')[i].classList.toggle('night-card');
+    document.querySelectorAll('.proj-card')[i].classList.toggle('border-night');
   }  
-   // This is for education cards
-  for(let i = 0; i < totalSkills; i++){
-    document.querySelectorAll('.edu-card')[i].classList.toggle('edu-card-night');
-  }    
-   // This is for seperators
-  for(let i = 0; i < totalSeperator; i++){
-    document.querySelectorAll('.seperator')[i].classList.toggle('seperator-night');
-  }    
+
 }

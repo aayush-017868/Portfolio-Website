@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="assets/myPics/aLogo.png" type="image/icon type">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap" rel="stylesheet">
 <title>Portfolio Website</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/nmp/typed.js@2.0.12"></script>
@@ -15,6 +19,7 @@
     <div class="main">    
         <label class="toggle" onchange="toggleNightMode()">
             <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+
             <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
             <input type="checkbox" class="input">
             <span class="slider"></span>
@@ -30,12 +35,13 @@
             <!-- This is a set of options to be displayed from the  top  right corner -->
             <div class="options">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#connect">Connect</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#technologies" class="nav-link">Technologies</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#connect" class="nav-link">Connect</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                     
                 </ul>
             </div>
@@ -44,12 +50,13 @@
     <div class="dropdown">
         <div onclick="toggleDropdown()" class="dropdown-btn" >≡</div>
         <div class="dropdown-content" id="dropdownContent">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#connect">Connect</a>
-            <a href="#contact">Contact</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#technologies" class="nav-link">Technologies</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#connect" class="nav-link">Connect</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </div>
 </div>
@@ -66,8 +73,8 @@
         </h1>
         <!-- This is the designation that will lie below the name -->
         <!-- <h2 class="subheading typeAnimate" onload="typeAnimation()";>A Programmer and Web-Developer</h2> -->
-        <h2 class="subheading">
-            <span class="typeAnimate"></span>
+        <h2 class="subheading text-animator">
+            <span class="typeAnimate "></span>
         </h2>
     </div>
     <!-- This is the resume download button -->
@@ -80,13 +87,13 @@
     
     <!-- This is About Section -->
     <section id="about">
-        <h2 class="all-heading">About Me</h2>
+        <h2 class="all-heading text-animator">About Me</h2>
         <div class="about">
-            <div class="proj-image-sec">
+            <div class="proj-image-box-sec">
                 <div class="circle">
                     <div class="inner-circle">
                         <div class="inner-circle-front">
-                            <img class="dp d-block mx-auto mb-4" src="assets/myphoto-min.webp" alt="Picture of Aayush"> 
+                            <img class="dp d-block mx-auto mb-4" src="assets/myPics/myphoto-min.webp" alt="Picture of Aayush"> 
                         </div>
                     </div>
                 </div>
@@ -94,7 +101,7 @@
             </div>   
             <div class="about-text">
                 <p class="about-text-heading">
-                    I am a frontend web developer and programmer. My objective is to work with an organization that fosters learning opportunities, allowing me to expand my skill set and boost both organizational objectives and personal advancement.
+                    I am a Web developer and Programmer. My objective is to work with an organization that fosters learning opportunities, allowing me to expand my skill set and boost both organizational objectives and personal advancement.
                 </p>
                 <p class="about-text-content hidden-paragraph visible">
                     As an MCA final year student, I am passionate about leveraging technology to solve real-world challenges. My skill set encompasses a diverse range of technologies and programming languages, making me adept in both front-end and back-end development. Proficient in HTML, CSS, and JavaScript, I bring a creative approach to web design. 
@@ -113,7 +120,7 @@
     <!-- This is Education Section -->
     <!-- This is Education Section -->
     <div class="education">        
-        <header><p class="all-heading">Education</p></header>
+        <header><p class="all-heading text-animator">Education</p></header>
         <div class="edu-container">
             
             <!-- Education 1 -->
@@ -142,7 +149,7 @@
                 <div class="edu-descBox">
                     <p class="edu-desc">
                         <b>School : </b>Vivek Jyoti H.S. School, Balaghat(MP) <br>
-                        <b>Percentage : </b>89.83%
+                        <b>Percentage : </b>88.80%
                     </p>
                 </div> 
             </div>
@@ -152,7 +159,7 @@
                 <div class="edu-descBox">
                     <p class="edu-desc">
                         <b>School : </b>Vivek Jyoti H.S. School, Balaghat(MP) <br>
-                        <b>Percentage : </b>88.80%
+                        <b>Percentage : </b>89.83%
                     </p>
                 </div> 
             </div>
@@ -160,7 +167,104 @@
         </div>
     
     <br>
+    <br>
+
+
+    <a name="technologies"><hr class="seperator"></a>
+    <br>
+
     
+    <!-- This is Technologies Section -->
+    <!-- This is Technologies Section -->
+    <div class="technologies">        
+        <header><p class="all-heading text-animator">Technologies</p></header>
+        <div class="technology-container">
+            
+            <!-- Technologies 1 -->
+            <div class="tech-card">
+                <h2 class="tech-header">Frontend</h2>
+
+                    <div class="tech-container">
+                        <div class="tech-tab">
+                            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" class="tech-logo">
+                            HTML
+                        </div>
+                        <div class="tech-tab">
+                            <img src="assets/frontend/css.png" class="tech-logo">
+                            CSS
+                        </div>
+                        <div class="tech-tab">
+                            <img src="assets/frontend/bootstrapLogo.png" class="tech-logo">
+                            Bootstrap
+                        </div>
+                        <div class="tech-tab">
+                            <img src="assets/frontend/jsLogo.png" class="tech-logo">
+                            JavaScript
+                        </div>
+                        <div class="tech-tab">
+                            <img src="assets/frontend/reactJs.png" class="tech-logo">
+                            React Js
+                        </div>
+                    </div>
+                    </div>
+    
+           <!-- Technologies 2 -->
+            <div class="tech-card">
+                <h2 class="tech-header">Backend</h2>
+                    <div class="tech-container temp-margin">
+                        <div class="tech-tab">
+                            <img src="assets/backend/nodeJs.png" class="tech-logo">Node Js
+                        </div>
+                        <div class="tech-tab">
+                            <img src="assets/backend/mysql.png" class="tech-logo">MySQL
+                        </div>
+                        <div class="tech-tab">
+                            <img style="width: 2.5rem; height: 1.4rem;" src="assets/backend/phpLogo.png" class="tech-logo">php
+                        </div>
+                    </div>
+                </div>
+         
+        <!-- Technologies 3 -->
+            <div class="tech-card">
+                <h2 class="tech-header">Programming Languages</h2>
+                    <div class="tech-container temp-margin">
+                        <div class="tech-tab">
+                            <img src="assets/languages/java.png" class="tech-logo">
+                            Java
+                        </div>
+                        <div class="tech-tab">
+                            <img src="assets/languages/pythonLogo.png" class="tech-logo">
+                            Python
+                        </div>
+                        <div class="tech-tab">
+                            <img src="assets/languages/cLogo.png" class="tech-logo">
+                            C
+                        </div>
+                    </div>
+
+                </div>
+          <!-- Technologies 4 -->
+            <div class="tech-card">
+                <h2 class="tech-header">Platforms</h2>
+                    <div class="tech-container">
+                        <div class="tech-tab">
+                            <img src="assets/platforms/vsCode.png" class="tech-logo">VS Code</div>
+                        <div class="tech-tab">
+                            <img src="assets/platforms/gitLogo.png" class="tech-logo">Git</div>
+                        <div class="tech-tab">
+                            <img src="assets/connect/github.webp" class="tech-logo">GitHub</div>
+                        <div class="tech-tab">
+                            <img src="assets/platforms/intelliJLogo.png" class="tech-logo">IntelliJ IDEA</div>
+                            <div class="tech-tab">
+                                <img src="assets/platforms/mysqlworkbench.jpg" class="tech-logo">MySQL Workbench</div>
+                        <div class="tech-tab">
+                            <img src="https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png" class="tech-logo">Netlify</div>
+                     </div>
+                </div>  
+
+        </div>
+    </div>
+    <br>
     <br>
     <a name="skills"> <hr class="seperator"></a>
     <!-- This is Education Section -->
@@ -172,7 +276,7 @@
     <div class="skills">
         
         
-        <header><p class="all-heading">Skills</p></header>
+        <header><p class="all-heading text-animator">Skills</p></header>
         <div class="skills-container">
             
             <!-- Skill 1 -->
@@ -182,9 +286,9 @@
                     <img class="skill-pic" src="assets/skills/Salesforce.png" alt="">
                 </div>
                 <div class="skill-descBox">
-                    <p class="skill-desc">I bring a comprehensive skill set and extensive experience in Salesforce Administration, Salesforce Development, Data Management, Workflow Automation. My proficiency encompasses a wide array of Salesforce functionalities, including Flows, Apex Classes, and Apex Triggers, Visualforce Basics, SOSL ans SOQL Queries, Lightning Web Components (LWC).
-                        I have completed 15 superbadges on Salesforce Trailhead. <br>Checkout my Salesforce Trailhead profile :
+                    <p class="skill-desc">I bring a comprehensive skill set and extensive experience in Salesforce Administration, Salesforce Development. Completed more than 15 superbadges and Admin SuperSet on Salesforce Trailhead Platform. <br> <br>Checkout my Salesforce Trailhead profile :
                     </p>
+                    
                 </div>
                 <div class="skill-btn-container">
                     <a href="https://www.salesforce.com/trailblazer/aayushpatle" target="_blank"><button class="skill-btn skill-tb"></button></a>
@@ -200,7 +304,7 @@
                     <img class="skill-pic" src="assets/skills/webdev.png" alt="">
                 </div>
                 <div class="skill-descBox">
-                    <p class="skill-desc">As a fresher in frontend web development and web designing, I specialize in crafting, engaging and building responsive user interfaces. With expertise in HTML, CSS, Bootstrap framework, and JavaScript, I create visually appealing and functional websites. Soon, I'll be diving into React js framework to further enhance my skills and build dynamic, interactive web applications. I am dedicated to staying updated with the latest web development trends and best practices.</p>
+                    <p class="skill-desc">As a web developer and web designer, I specialize in crafting, engaging and building responsive user interfaces. With expertise in HTML, CSS, Bootstrap framework, and JavaScript, I create visually appealing and functional websites. I am dedicated to stay updated with the latest web development trends and best practices.</p>
                 </div>
                 <div class="skill-btn-container"></div>
             </div>
@@ -213,7 +317,7 @@
                 </div>
                 <div class="skill-descBox">
                     <p class="skill-desc" style="margin-bottom: 0;">
-                        Within my skill set, I prioritize problem-solving, leveraging Java as my primary programming language. With expertise in data structures like Arrays, strings, HashMap, LinkedList, stack, and queue. I've successfully solved over 200 coding problems across some platforms like LeetCode, I am a 5-star coder on HackerRank in Java problem solving . Combining analytical thinking with systematic approaches, I excel in crafting efficient solutions to complex problems. <br>Checkout my Profile :
+                        I prioritize problem-solving, leveraging Java as my primary programming language. I've successfully solved over 200 coding problems across some platforms like LeetCode, I am a 5-star coder on HackerRank in Java and SQL problem solving. <br><br>Checkout my Profiles :
                     </p>
                     
                 </div>
@@ -231,12 +335,13 @@
                     <img class="skill-pic" src="assets/skills/softskill.png" alt="">
                 </div>
                 <div class="skill-descBox">
-                    <p class="skill-desc">My skill set encompasses essential soft and interpersonal skills, emphasizing effective communication, teamwork, and problem-solving. I prioritize empathy and understanding to foster positive relationships and collaboration. I navigate diverse environments with adaptability and resolve conflicts constructively. With strong leadership qualities, I empower teams to achieve common objectives. Committed to continuous growth, I contribute positively to team dynamics and organizational success.</p>
+                    <p class="skill-desc">My skill set encompasses essential soft and interpersonal skills, emphasizing effective communication, teamwork.  I navigate diverse environments with adaptability and resolve conflicts constructively.I contribute positively to team dynamics and organizational success.</p>
                 </div>
                 <div class="skill-btn-container"></div>
             </div>
         </div>
     </div>
+
     <!-- Skills Section -->
     <!-- Skills Section -->
     <br><br>
@@ -245,19 +350,25 @@
     <!-- Projects Section -->
     <!-- Projects Section -->
     <div class="project">
-        <header><p class="all-heading">Projects</p></header>
+        <header><p class="all-heading text-animator">Projects</p></header>
         
         <div class="proj-container">
             <!-- Project 1 -->
             <div class="proj-card">
-                <div class="proj-image">
+                <div class="proj-image-box">
                     <img class="proj-img" src="https://complainthub.in/wp-content/uploads/2022/11/Myntra-logo.png" alt="">
                 </div>
+                <div class="proj-header"><p>Mynta Clone</p></div>
                 <div class="proj-lower-div">
-                    <div class="proj-header"><p>Mynta Clone</p></div>
+                    <div class="tool-box">
+                        <span class="tool-btn">HTML</span>
+                        <span class="tool-btn">CSS</span>
+                        <span class="tool-btn">JavaScript</span>
+                        <span class="tool-btn">Bootstrap</span>
+                    </div>
                     <div class="proj-desc">
-                        It is a clone website of the online Shopping Application Myntra built using HTML, CSS and Javascript</div>
-                    </div>        
+                        It is a clone website of the online Shopping Application Myntra. hello world how are you i am fime nenjuaisbasdb</div>
+                </div>        
                     <a class="proj-click-btn" href="https://aayush-017868.github.io/Myntra-Clone/" target="_blank">
                         <button class="proj-choose">Click to open</button>
                     </a>
@@ -265,11 +376,17 @@
                 
     <!-- Project 4 -->
     <div class="proj-card project1">
-        <div class="proj-image">
+        <div class="proj-image-box">
             <img class="proj-img" src="assets/projects/guessmynum.webp" alt="">
         </div>
+        <div class="proj-header"><p>Guess My Number</p></div>
         <div class="proj-lower-div">
-            <div class="proj-header"><p>Guess My Number</p></div>
+            <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Bootstrap</span>
+              </div>
             <div class="proj-desc">
                 It is a simple number guessing game where user guesses a number between a range of 0 to 100 and gets score accordingly.</div>
             </div>        
@@ -282,13 +399,20 @@
         
         <!-- Project 2 -->
         <div class="proj-card project2">
-            <div class="proj-image">
+            <div class="proj-image-box">
                 <img class="proj-img" src="assets/projects/countryflag.webp" alt="">
             </div>
+            <div class="proj-header"><p>Country Flag</p></div>
             <div class="proj-lower-div">
-                <div class="proj-header"><p>Country Flag</p></div>
+                <div class="tool-box">
+                    <span class="tool-btn">HTML</span>
+                    <span class="tool-btn">CSS</span>
+                    <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Bootstrap</span>
+
+                </div>
                 <div class="proj-desc">
-                    It is a country flag project where the flags of different countries are designed using purely HTML and CSS.</div>
+                    This website is used to enhance the CSS knowledge in which the flags of different countries are designed using pure CSS.</div>
                 </div>        
                 <a class="proj-click-btn" href="https://aayush-017868.github.io/Country-Flags/" target="_blank">
                     <button class="proj-choose">Click to open</button>
@@ -298,13 +422,19 @@
             
             <!-- Project 3 -->
             <div class="proj-card project3">
-                <div class="proj-image">
+                <div class="proj-image-box">
                     <img class="proj-img" src="assets/projects/calculator-app.webp" alt="">
                 </div>
+                <div class="proj-header"><p>Calculator</p></div>
                 <div class="proj-lower-div">
-                    <div class="proj-header"><p>Calculator</p></div>
+                    <div class="tool-box">
+                        <span class="tool-btn">HTML</span>
+                        <span class="tool-btn">CSS</span>
+                        <span class="tool-btn">JavaScript</span>
+                        <span class="tool-btn">Tailwind</span>
+                    </div>
                     <div class="proj-desc">
-                        It is a simple calculator built using HTML, CSS and javascript.</div>
+                        It is a simple calculator that can perform all the basic arithmatic operations.</div>
                     </div>        
                     <a class="proj-click-btn" href="https://aayush-017868.github.io/Calculator/" target="_blank">
                         <button class="proj-choose">Click to open</button>
@@ -314,13 +444,19 @@
                 
                 <!-- Project 3 -->
                 <div class="proj-card project4">
-        <div class="proj-image">
+        <div class="proj-image-box">
             <img class="proj-img" src="https://play-lh.googleusercontent.com/Vn9sIUPcCVihrxMATWR_MjCIFuc5quCw-R3UN8Rmoze7rgaBhHdmF2RqjX3x28EJoQ" alt="">
         </div>
+        <div class="proj-header"><p>Temperature Convertor</p></div>
         <div class="proj-lower-div">
-            <div class="proj-header"><p>Temperature Convertor</p></div>
+            <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Bootstrap</span>
+            </div>
             <div class="proj-desc">
-                It is a temperature convertor that is built using HTML, CSS and Javascript.</div>
+                It is a temperature convertor which converts the temperature within kelvin, farhenite and celcius.</div>
             </div>        
             <a class="proj-click-btn" href="https://aayush-017868.github.io/Temperature-Convertor/" target="_blank">
                 <button class="proj-choose">Click to open</button>
@@ -330,43 +466,53 @@
         
         <!-- Project 5 -->
         <div class="proj-card project5">
-            <div class="proj-image">
+            <div class="proj-image-box">
                 <img class="proj-img" src="assets/projects/tin-dog.webp" alt="">
             </div>
+            <div class="proj-header"><p>Tinder for Dogs</p></div>
             <div class="proj-lower-div">
-                <div class="proj-header"><p>Tinder for Dogs</p></div>
+                <div class="tool-box">
+                    <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Bootstrap</span>
+
+                </div>
                 <div class="proj-desc">
-                    It is a tinder web app for dogs where different dogs can be matched up having multiple features</div>
+                    It is a tinder web app for dogs where different dogs of different breeds can be matched up having multiple features</div>
                 </div>        
                 <a class="proj-click-btn" href="https://aayush-017868.github.io/Tinder-for-Dogs/" target="_blank">
                     <button class="proj-choose">Click to open</button>
                 </a>
             </div>
+        
         </div>
     </div>
+
+
 <br><br>
 <a name="connect"><hr class="seperator"></a>
 <br>
-    <!-- Projects Section -->
-    <!-- Projects Section -->
-    
-    <div class="connect">
-        <header><p class="connect-heading">Connect</p></header>
-        <!-- Connection Section -->
-        <!-- Connection Section -->
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/aayush-patle-31878a225/" class="social-link" id="linkedin" target="_blank">
-                <img src="assets/connect/linkedin.webp" alt="LinkedIn" class="social-icon">
-            </a>
-            <a href="https://github.com/aayush-017868" class="social-link" id="github" target="_blank">
-                <img src="assets/connect/github.webp" alt="GitHub" class="social-icon">
-            </a>
-            <a href="https://www.hackerrank.com/profile/aayushpatle01" class="social-link" id="hackerrank" target="_blank">
-                <img src="assets/connect/hckrnk.webp" alt="HackerRank" class="social-icon">
-            </a>
-            <a href="https://leetcode.com/__aayush_01/" class="social-link" id="leetcode" target="_blank">
-                <img src="assets/connect/lc.webp" alt="LeetCode" class="social-icon">
-            </a>
+<!-- Projects Section -->
+<!-- Projects Section -->
+
+<div class="connect">
+    <header><p class="connect-heading text-animator">Connect</p></header>
+    <!-- Connection Section -->
+    <!-- Connection Section -->
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/aayush-patle-31878a225/" class="social-link" id="linkedin" target="_blank">
+            <img src="assets/connect/linkedin.webp" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://github.com/aayush-017868" class="social-link" id="github" target="_blank">
+            <img src="assets/connect/github.webp" alt="GitHub" class="social-icon">
+        </a>
+        <a href="https://www.hackerrank.com/profile/aayushpatle01" class="social-link" id="hackerrank" target="_blank">
+            <img src="assets/connect/hckrnk.webp" alt="HackerRank" class="social-icon">
+        </a>
+        <a href="https://leetcode.com/__aayush_01/" class="social-link" id="leetcode" target="_blank">
+            <img src="assets/connect/lc.webp" alt="LeetCode" class="social-icon">
+        </a>
             <a href="https://youtube.com/@apxcreations5989?si=wfNJLpEh_CcfoBJ_" class="social-link" id="youtube" target="_blank">
                 <img src="assets/connect/ytLogo.png" alt="YouTube" class="social-icon">
             </a>
@@ -380,11 +526,13 @@
                 <img src="assets/connect/x.webp" alt="X" class="social-icon">
             </a>
         </div>
-        <BR></BR>
+</div>
+   
+   
         <!-- Connection Section -->
         <!-- Connection Section -->
-        
-        
+        <a name="contact"><br class="seperator"></a>
+        <br><br>
         <!-- Contact Section -->
         <!-- Contact Section -->
         
@@ -411,7 +559,7 @@
                     </div>
                 </div>
         </div>
-        <p class="copyright">© Aayush Patle 2023 - <span id="year">2024</span></p>
+        <p class="copyright">© Aayush Patle 2024</p>
     </div>
     <!-- Contact Section -->
     <!-- Contact Section -->
