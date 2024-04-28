@@ -632,7 +632,7 @@ h2.subheading {
 }
 
 .skill-card:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 /*Styles the headings of each skill*/
 .skill-header {
@@ -755,7 +755,7 @@ h2.subheading {
 }
 /* This targets project cards when they are hovered */
 .proj-card:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 /* Targets the div inside which the project image is present in the project card */
@@ -1083,11 +1083,16 @@ button {
   background-color: transparent;
   color: aliceblue;
 }
+
+.night-card:hover{
+  box-shadow: inset 0px 0px 0em 0px var(--glow-color),
+    0px 0px 0.8rem 0px var(--glow-color);
+    transition: .5s;
+    background-color: black;
+}
 /* Border properties for night mode */
 .border-night {
   border: 2px solid var(--glow-color);
-  box-shadow: inset 0px 0px 0em 0px var(--glow-color),
-    0px 0px 0.8rem 0px var(--glow-color);
 }
 
 .toggle {
