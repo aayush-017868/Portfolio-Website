@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: aliceblue;
+}
+*{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  /* background-color: antiquewhite; */
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+}
+/* Heading for the main skill, not related to any card */
+.skills-heading{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/*Styles all the logos used in the skill cards*/
+.skill-pic{
+    height: 4rem;
+    width: 100%;
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: inherit;
+    width: inherit;
+    justify-content: center;
+    gap: 2.5rem;
+    align-items: center;   
+}
+
+/*Highlight the key points inside the description of the skills*/
+.make-bold-points{font-weight: 500;}
+/* All css for salesforce skillset */
+.skill-card{
+    display: flex;
+    /* flex-basis: inherit; */
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    border-radius: .8rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover{
+    transform: scale(1.1);
+}
+/*Styles the headings of each skill*/
+.skill-header{
+    font-weight: 600;
+    text-align: center;
+    height: 3rem;
+}
+/*Styles the logo container of each skill*/
+.skill-logo{
+   height: 3rem;
+}
+/*Styles the description container of each skill*/
+.skill-descBox{
+    height: 28rem;
+}
+/* Style the buttons container inside cards */
+.skill-btn-container{
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    margin-top: 1.5rem;
+ }
+ .skill-btn-container > p{
+    margin: 0;
+    padding: 0rem 1rem 0rem 1rem;
+ }
+/*Targets all the description inside the skill cards*/
+.skill-desc{
+    width: 200px;
+    padding: 0rem 1rem 0rem 2rem;
+    /* text-align: left; */
+}
+.skill-desc::after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+
+/*Salesforce*/
+.skill-tb{
+    background-image: url(trailhead.png);
+}
+.skill-sfbtn{
+    display: flex;
+    padding-left: 2rem;
+    justify-content: left;
+}
+   
+/*Frontend*/
+#feh{padding: 0rem 1rem 0rem 1rem;}
+/*Soft Skills*/
+
+
+/*Problem Solving*/
+/* Styling the buttons */
+.skill-lc{
+    background-image: url('leetcodeButton.png');
+}
+
+.skill-hk{
+    background-image: url('HackerrankButton.png');
+}
+.skill-btn{
+    background-size: cover;
+    background-position: center;
+    display: absolute;
+    width: 6rem;
+    height: 1.6rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}

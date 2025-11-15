@@ -1,0 +1,1387 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+html{
+  scroll-behavior: smooth;
+}
+body {
+  text-align: center;
+  background: linear-gradient(
+    -30deg,
+    rgb(193, 220, 241),
+    rgb(213, 233, 251),
+    rgb(228, 232, 235),
+    aliceblue
+  );
+  background-size: 400% 400%;
+  /* background-position: center; */
+  animation: gradient-animation 12s ease infinite;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Recursive", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0.5, "MONO" 0;
+  font-optical-sizing: auto;
+  /* background-color: antiquewhite; */
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+/* CSS for all the headings on the webPage */
+.all-heading {
+  color: #49afaf;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+/* CSS for all hr seperators */
+.seperator {
+  border: none;
+  width: 60%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 10px 20px -20px #333;
+  margin: -50px auto 10px;
+}
+.seperator-night {
+  border: none;
+  width: 60%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #120606;
+  box-shadow: 0 10px 20px -20px #f1e0e0;
+  margin: -50px auto 10px;
+}
+/* Animation for bg  */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+.nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 3.5rem;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background: linear-gradient(
+    50deg,
+    rgb(44, 128, 201),
+    #65a5dd,
+    rgb(18, 120, 205),
+    #0073ff
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
+  /* overflow: hidden; */
+  color: white;
+}
+#refreshbutton {
+  color: white;
+}
+.name {
+  margin: 0.2rem 3rem;
+  font-size: large;
+  font-weight: 700;
+  padding: 0;
+}
+
+/*This code is for list of options in the nav bar aligned horizontally*/
+@media (max-width: 77rem) {
+  .options {
+    display: none;
+  }
+}
+.options {
+  padding-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.options li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.options li a {
+  text-decoration: none;
+  color: white;
+  font-weight: -500;
+}
+
+/*This is the code for dropdown*/
+
+.dropdown {
+  position: relative;
+  right: 13%;
+  padding-right: 5%;
+  display: none;
+}
+.dropdown-btn {
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+}
+/* Style for the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 1px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  /* margin-top: 10rem; */
+  z-index: 1;
+}
+/* Show the dropdown content when the dropdown button is clicked */
+.dropdown-content a {
+  color: #333;
+  padding: 0.75rem;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content.show {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+@media (max-width: 77rem) {
+  .dropdown {
+    display: inline-block;
+    right: 0;
+  }
+}
+
+/* NAVIGATION BAR CODE ENDS HERE */
+/* NAVIGATION BAR CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* HOME SECTION CODE STSRTS HERE */
+/* HOME SECTION CODE STSRTS HERE */
+
+@media (max-width: 48rem) {
+  .container {
+    height: 90vh;
+  }
+}
+
+.container {
+  border-radius: 0.5rem;
+  padding-top: 0;
+  margin: 1rem;
+  margin-top: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.fading-text {
+  font-family: Arial;
+  font-size: 10rem;
+  animation: fadeIn 3s;
+}
+.front {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "poppins";
+}
+.front h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+  background: linear-gradient(
+    -30deg,
+    rgb(9, 131, 90),
+    #1270c2,
+    rgb(5, 67, 144),
+    #38c268
+  );
+  background-size: 400% 400%;
+  background-position: center;
+  animation: gradient-animation 12s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.text-animator {
+  background: linear-gradient(
+    -30deg,
+    rgb(9, 131, 90),
+    #1270c2,
+    rgb(123, 186, 238),
+    #38c268
+  );
+  background-size: 400% 400%;
+  background-position: center;
+  animation: gradient-animation 12s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.subheading {
+  font-size: 2rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+
+.resume {
+  display: inline-block;
+  height: 3rem;
+}
+@media (max-width: 48rem) {
+  #res-link {
+    display: block;
+  }
+}
+
+.typeAnimate {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-right: 0.2em solid;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+  background-size: 400% 400%;
+  background-position: center;
+  animation: gradient-animation 12s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 500px) {
+  .typeAnimate {
+    font-size: 2.2rem;
+  }
+}
+
+.typeAnimate::after {
+  content: "";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* HOME SECTION CODE ENDS HERE */
+/* HOME SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* ABOUT SECTION CODE STARTS HERE */
+/* ABOUT SECTION CODE STARTS HERE */
+/* About Page */
+#about {
+  padding-top: 2rem;
+  width: 100%;
+}
+
+h2.subheading {
+  color: #3a6767;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.about {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+@media (max-width: 76.5rem) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-text {
+    width: 100%;
+  }
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  padding: 0;
+  width: 50%;
+  text-align: center;
+  margin-left: 2rem;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 62rem) {
+  .image-sec {
+    height: auto;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.image-sec {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* This is a section which will be containing another circle inside it which will further contain the image */
+
+.circle {
+  background-color: transparent;
+  width: 22rem;
+  height: 22rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 29.4rem) {
+  .circle {
+    height: 15rem;
+    width: 15rem;
+  }
+}
+
+/* This is the styling for the circle which contains our image and a text when flipped  */
+.inner-circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0.5rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+/* Here, we are styling the front and the back circle together */
+
+/* This is that circle which contains our image which will be displayed on the front side  */
+.inner-circle-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.dp {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+/*First Paragraph*/
+.about-text-heading {
+  padding: 0;
+  font-size: 1.2rem;
+  color: #186f6f;
+}
+
+/*These 3 selectors are for the below rwo paragraphs where we shall apply animation*/
+.about-text-content {
+  padding: 0;
+  font-size: 0.9rem;
+  color: #289595;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hidden-paragraph {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: opacity 1s, transform 1s;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ABOUT SECTION CODE ENDS HERE */
+/* ABOUT SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* COMPANIES SECTION STARTS HERE */
+/* COMPANIES SECTION STARTS HERE */
+
+
+.comp-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  /* align-items: center; */
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.comp-logo:hover {
+  transform: scale(1.1);
+  /* transition: transform 0.3s ease; */
+  
+}
+
+.comp-header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  /* height: 5%; */
+}
+
+
+.comp-logo {
+  transition: transform 0.3s ease;
+  width: 10rem;
+  aspect-ratio: 1.5;
+  object-fit: contain;
+}
+
+
+/* COMPANIES SECTION ENDS HERE */
+/* COMPANIES SECTION ENDS HERE */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* EXPERIENCE SECTION CODE STARTS HERE */
+/* EXPERIENCE SECTION CODE STARTS HERE */
+.experience {
+  margin-bottom: 1rem;
+}
+.exp-heading {
+  color: #3a6767;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.exp-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+}
+.exp-header {
+  font-weight: bold;
+  margin: 1rem 0.5rem 0rem 0.5rem;
+  font-size: 1.6rem;
+}
+.exp-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50rem;
+  align-content: flex-start;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  transition: transform 0.3s ease;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.1),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.1);
+}
+.exp-desc {
+  padding: 0.1rem 1rem;
+  text-align: left;
+}
+
+.exp-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: url("assets/Companies/AccentureLogo.png") no-repeat left center;
+  background-size: cover;
+  opacity: 0.15;
+  transition: all 0.8s ease;
+  z-index: 0;
+}
+
+.exp-card:hover::before {
+  left: 0;
+  opacity: 0.25;
+}
+
+.exp-card > * {
+  position: relative;
+  z-index: 2; /* Keeps text above the image */
+}
+
+/* EXPERIENCE SECTION CODE ENDS HERE */
+/* EXPERIENCE SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* EDUCATION SECTION CODE STARTS HERE */
+/* EDUCATION SECTION CODE STARTS HERE */
+.education {
+  margin-bottom: 1rem;
+}
+.edu-heading {
+  color: #3a6767;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.edu-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+}
+.edu-header {
+  font-weight: bold;
+  margin: 1rem 0.5rem 0rem 0.5rem;
+}
+.edu-card {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  align-content: flex-start;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  transition: transform 0.3s ease;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.1),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.1);
+}
+.edu-desc {
+  padding: 0.1rem 1rem;
+  text-align: left;
+}
+
+/*For lnct */
+.lnct::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: url("assets/institutes/LNCT.png") no-repeat left center;
+  background-size: cover;
+  opacity: 0.15;
+  transition: all 0.8s ease;
+  z-index: 0;
+}
+
+.lnct:hover::before {
+  left: 0;
+  opacity: 0.25;
+}
+/*For DU*/
+.du::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: url("assets/institutes/du.png") no-repeat left center;
+  background-size: cover;
+  opacity: 0.15;
+  transition: all 0.8s ease;
+  z-index: 0;
+}
+
+.du:hover::before {
+  left: 0;
+  opacity: 0.25;
+}
+/*For School*/
+.school::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: url("assets/institutes/vjhss.png") no-repeat left center;
+  background-size: cover;
+  opacity: 0.15;
+  transition: all 0.8s ease;
+  z-index: 0;
+}
+
+.school:hover::before {
+  left: 0;
+  opacity: 0.25;
+}
+
+/* EDUCATION SECTION CODE ENDS HERE */
+/* EDUCATION SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/* TECHNOLOGIES SECTION STARTS HERE */
+/* TECHNOLOGIES SECTION STARTS HERE */
+
+.temp-margin{
+  margin-top: 4rem;
+}
+.technology-container {
+  /* box-sizing: border-box; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+@media (max-width: 960px) {
+  .technology-container {
+    flex-direction: column;
+  }
+}
+
+.tech-card {
+  width: 60%;
+  height: 15rem;
+  max-width: 500px;
+  background: rgb(234, 238, 242);
+  box-shadow: 10px 4px 1.5rem rgba(2, 27, 76, 0.15);
+  border-radius: 1rem;
+  padding: 18px 36px;
+}
+@media (max-width: 768px) {
+  .tech-card {
+    max-width: 400px;
+    padding: 10px 36px;
+  }
+}
+@media (max-width: 588px) {
+  .tech-card {
+    max-width: 330px;
+    padding: 10px 36px;
+    height: auto;
+  }
+}
+.tech-header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  /* height: 5%; */
+}
+.tech-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech-tab {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0);
+  border: 1px solid rgba(242, 243, 244, 0.2);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 4px 4px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tech-logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+/* TECHNOLOGIES SECTION ENDS HERE */
+/* TECHNOLOGIES SECTION ENDS HERE */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* SKILLS SECTION CODE STARTS HERE */
+/* SKILLS SECTION CODE STARTS HERE */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+/* Heading for the main skill, not related to any card */
+.skills-heading {
+  color: #3a6767;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/*Styles all the logos used in the skill cards*/
+.skill-pic {
+  height: 4rem;
+  width: 100%;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/*Highlight the key points inside the description of the skills*/
+.make-bold-points {
+  font-weight: 500;
+}
+/* All css for salesforce skillset */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.4rem;
+  transition: transform 0.3s ease;
+  box-shadow: 6px -6px 10px 0 rgba(0, 0, 0, 0.1),
+    6px 6px 10px 0 rgba(255, 255, 255, 0.1);
+}
+
+.skill-card:hover {
+  /* transform: scale(1.1); */
+}
+/*Styles the headings of each skill*/
+.skill-header {
+  font-weight: 600;
+  text-align: center;
+  height: 3rem;
+  padding: 0 1rem;
+}
+/*Styles the logo container of each skill*/
+.skill-logo {
+  height: 3rem;
+}
+/*Styles the description container of each skill*/
+.skill-descBox {
+  height: 16rem;
+  text-align: left;
+  /* text-align: center; */
+}
+/* Style the buttons container inside cards */
+.skill-btn-container {
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+  margin-top: 1.5rem;
+}
+.skill-btn-container > p {
+  margin: 0;
+  padding: 0rem 1rem 0rem 1rem;
+}
+/*Targets all the description inside the skill cards*/
+.skill-desc {
+  width: 200px;
+  padding: 0rem 1rem 0rem 2rem;
+  /* text-align: left; */
+}
+.skill-desc::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+/*Salesforce*/
+.skill-tb {
+  background-image: url(assets/Buttons/trailhead.webp);
+}
+.skill-sfbtn {
+  display: flex;
+  padding-left: 2rem;
+  justify-content: left;
+}
+
+/*Frontend*/
+#feh {
+  padding: 0rem 1rem 0rem 1rem;
+}
+/*Soft Skills*/
+
+/*Problem Solving*/
+/* Styling the buttons */
+.skill-lc {
+  background-image: url(assets/Buttons/leetcodeButton.webp);
+}
+
+.skill-hk {
+  background-image: url(assets/Buttons/HackerrankButton.webp);
+}
+.skill-btn {
+  background-size: cover;
+  background-position: center;
+  display: absolute;
+  width: 6rem;
+  height: 1.6rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/* SKILLS SECTION CODE ENDS HERE */
+/* SKILLS SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/* PROJECT SECTION CODE STARTS HERE */
+/* PROJECT SECTION CODE STARTS HERE */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/* Heading for the main education, not related to any card */
+/* Main heading of Project */
+.proj-heading {
+  color: #3a6767;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+/* This contains all the cards of project */
+.proj-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+/* This targets all the project cards  */
+.proj-card {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  align-items: center;
+  align-content: flex-start;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.4rem;
+  transition: transform 0.3s ease;
+  box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.1),
+    6px 6px 10px 0 rgba(255, 255, 255, 0.1);
+}
+/* This targets project cards when they are hovered */
+.proj-card:hover {
+  /* transform: scale(1.1); */
+}
+
+/* Targets the div inside which the project image is present in the project card */
+.proj-image-box {
+  width: 100%;
+  height: 9.25rem;
+  overflow: hidden;
+}
+/* Targets the project image present in the project card */
+.proj-img {
+  padding: 1rem 0rem;
+  height: 7rem;
+  width: 9rem;
+}
+
+/* Targets the name of project */
+.proj-header {
+  height: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 0.3rem;
+}
+/* Targets the p tag of name of project header */
+.proj-header > p {
+  margin: 0;
+}
+/* Targets the tool box that shows the technologies used for the project */
+.tool-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.8rem 0rem 0.5rem 0rem;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --glow-color: hsl(201, 85%, 68%);
+}
+/* Targets the small buttons having name of the technologies used */
+.tool-btn {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--glow-color);
+  border: 1px solid var(--glow-color);
+  background-color: transparent;
+  padding: 2px 0.5rem;
+  border-radius: 0.8rem;
+  user-select: none;
+  box-shadow: inset 0px 0px 0.1rem 0px var(--glow-color),
+    0px 0px 0.2rem 0px var(--glow-color);
+}
+/* Targets the box where project description is written */
+.proj-desc {
+  margin: 0;
+  width: 10rem;
+  height: 10rem;
+  padding: 1rem 1rem 0rem 1.8rem;
+  text-align: left;
+}
+/* Targets the button to be clicked to view project */
+.proj-click-btn {
+  padding: 0.5rem 0rem 1rem 0rem;
+  height: 3rem;
+}
+
+/* Button Properties */
+.proj-choose {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #00a7fa;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: 0 1.4rem;
+  position: relative;
+  transition: all 250ms;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+/* Button Properties after hovered */
+.proj-choose:hover {
+  background-color: black;
+}
+.button-5:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 0.75rem;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+/* PROJECT SECTION CODE ENDS HERE */
+/* PROJECT SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/* CONNECT SECTION CODE STARTS HERE */
+/* CONNECT SECTION CODE STARTS HERE */
+.connect-heading {
+  color: #3a6767;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.social-links{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue; /* Change to preferred color */
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  width: 3rem;
+  height: 3rem;
+}
+/* CONNECT SECTION CODE ENDS HERE */
+/* CONNECT SECTION CODE ENDS HERE */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/* CONTACT SECTION CODE STARTS HERE */
+/* CONTACT SECTION CODE STARTS HERE */
+
+#contact {
+  background-color: #1a1c1c;
+  border-top-color: #0ce1e1;
+  margin: 0;
+  padding: 1rem;
+  padding-bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.subheading {
+  color: #0ce1e1;
+  font-weight: bold;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  flex-wrap: wrap;
+}
+@media (max-width: 1180px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  .right {
+    padding: 1rem 0rem 0rem 4rem;
+  }
+}
+
+.left,
+.right {
+  width: 40%;
+  color: #0ce1e1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 530px) {
+  .left {
+    display: none;
+  }
+}
+
+.right {
+  flex-direction: column;
+  text-align: left;
+}
+
+.right h3,
+h4 {
+  color: #125151;
+  margin-bottom: 0;
+}
+
+.right p {
+  margin-top: 0.5rem;
+}
+
+.bottom-icons {
+  margin-top: 1rem;
+}
+
+.bottom-icons a {
+  font-size: 1.5rem;
+  color: #186f6f;
+}
+
+.bottom-icons i {
+  margin-right: 0.75rem;
+}
+
+.form {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.form input,
+textarea {
+  padding-left: 1rem;
+}
+
+.form input,
+button {
+  height: 2.3rem;
+}
+
+.form * {
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  outline: none;
+}
+
+#subject {
+  grid-column: 1 / span 2;
+}
+
+#message {
+  grid-column: 1 / span 2;
+  resize: none;
+  padding: 15px;
+}
+
+#submit {
+  grid-column: 1 / span 2;
+  background-color: #fff;
+  color: #186f6f;
+}
+
+#submit:hover {
+  background-color: #736969;
+  color: white;
+}
+
+.copyright {
+  color: #eaf6f6;
+  font-size: 1rem;
+  padding: 1rem 0;
+  margin: 1rem 0 0 0;
+}
+
+/* CONTACT SECTION CODE ENDS HERE */
+/* CONTACT SECTION CODE ENDS HERE */
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/* Night Mode toggle button */
+
+.night-mode {
+  /* color: rgb(14, 129, 229); */
+  background: linear-gradient(-30deg, #074e65, #100000, #000a10, #100000);
+  background-size: 400% 400%;
+  background-position: center;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+/* Card Properties for Night mode */
+.night-card {
+  background-color: rgb(2, 23, 37);
+  background-color: transparent;
+  color: aliceblue;
+}
+
+.night-card:hover{
+  box-shadow: inset 0px 0px 0em 0px var(--glow-color),
+    0px 0px 0.8rem 0px var(--glow-color);
+    transition: .5s;
+    background-color: black;
+}
+/* Border properties for night mode */
+.border-night {
+  border: 2px solid var(--glow-color);
+}
+
+.toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 17px;
+  width: 2.8rem;
+  height: 0.9rem;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}

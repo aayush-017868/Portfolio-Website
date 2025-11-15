@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: aliceblue;
+}
+
+*{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  /* background-color: antiquewhite; */
+}
+/* Heading for the main education, not related to any card */
+.proj-heading{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.proj-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 40rem;
+    width: inherit;
+    justify-content: center;
+    gap: 2.5rem;
+    align-items: center;   
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    border-radius: .8rem;
+    transition: transform 0.3s ease;  
+}
+
+.img{
+    padding: 1rem 0rem;
+    height: 7rem;
+    width: 9rem;
+}
+.image{
+    border-radius: ;
+    width: 9rem;
+}
+.header{
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: .3rem;
+}
+.header > p{ margin: 0;}
+.desc{
+    margin: 0;
+    width: 10rem;
+    height: 9rem;
+    padding: 0rem 1rem 0rem 1.8rem;
+}
+
+.click-btn{
+    padding: 1rem 0rem;
+}
+
+/* Button Properties */
+.choose {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #00a7fa;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+      Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+  
+  .choose:hover{background-color: black;}
+  .button-5:hover,
+  .button-5:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  .button-5:hover {
+    transform: translateY(-1px);
+  }
+  
+  .button-5:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    transform: translateY(0);
+  }

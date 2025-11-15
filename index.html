@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="assets/myPics/aLogo.png" type="image/icon type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/nmp/typed.js@2.0.12"></script>
+    <!-- <link rel="icon" href="./Favicon.webp">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> -->
+  </head>
+  <body>
+    <div class="main">
+      <label class="toggle" onchange="toggleNightMode()">
+        <span class="sun"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g fill="#ffd43b">
+              <circle r="5" cy="12" cx="12"></circle>
+              <path
+                d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+              ></path>
+            </g></svg
+        ></span>
+
+        <span class="moon"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+              d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+            ></path></svg
+        ></span>
+        <input type="checkbox" class="input" />
+        <span class="slider"></span>
+      </label>
+
+      <!-- <button class="toggle-button" onclick="toggleNightMode()">Night</button> -->
+      <!-- This is our nav bar -->
+      <div class="nav">
+        <!-- This is our name to be displayed on top left corner -->
+        <div class="name">
+          <a href="#" id="refreshbutton"><p>Aayush</p></a>
+        </div>
+        <!-- This is a set of options to be displayed from the  top  right corner -->
+        <div class="options">
+          <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#technologies" class="nav-link">Technologies</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#connect" class="nav-link">Connect</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+        <!-- This is a dropdown that will help in direct navigation to the sections -->
+        <!-- It is basically used for opening the webpage in the small width devices -->
+        <div class="dropdown">
+          <div onclick="toggleDropdown()" class="dropdown-btn">≡</div>
+          <div class="dropdown-content" id="dropdownContent">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#technologies" class="nav-link">Technologies</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#connect" class="nav-link">Connect</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is our Home Section Page  -->
+      <div class="container">
+        <!-- This is a box which will have name -->
+        <div class="front fading-text">
+          <h1>
+            Hi
+            <span class="sm">,</span>
+            I am <br />
+            Aayush<span class="sm"></span>
+          </h1>
+          <!-- This is the designation that will lie below the name -->
+          <!-- <h2 class="subheading typeAnimate" onload="typeAnimation()";>A Programmer and Web-Developer</h2> -->
+          <h2 class="subheading text-animator">
+            <span class="typeAnimate"></span>
+          </h2>
+        </div>
+        <!-- This is the resume download button -->
+        <a
+          class="proj-click-btn"
+          href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fim-sorry&psig=AOvVaw3ZbwuQOhRSJfuoySIRci2s&ust=1735217184571000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLC9i_P5wooDFQAAAAAdAAAAABAE"
+          download="AayushResume.pdf"
+          target="_blank"
+        >
+          <button class="proj-choose">Resume</button>
+        </a>
+      </div>
+
+      <hr class="seperator" />
+
+      <!-- This is About Section -->
+      <section id="about">
+        <h2 class="all-heading text-animator">About Me</h2>
+        <div class="about">
+          <div class="proj-image-box-sec">
+            <div class="circle">
+              <div class="inner-circle">
+                <div class="inner-circle-front">
+                  <img
+                    class="dp d-block mx-auto mb-4"
+                    src="assets/myPics/myphoto-min.webp"
+                    alt="Picture of Aayush"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-text">
+            <p class="about-text-heading">
+              I am a Salesforce Developer at Accenture, driven by a passion for building scalable and impactful CRM solutions. My expertise spans across Apex, Lightning Web Components (LWC), Aura Components, Batch Classes, Visualforce Pages, Triggers, Flows, and Integrations.
+            </p>
+            <!-- <p class="about-text-content hidden-paragraph visible"> -->
+            <p class="about-text-heading">
+              In addition to Salesforce development, I have a strong foundation in Data Structures and Algorithms, along with proficiency in Java and MySQL. I approach every challenge with a problem-solving mindset and a commitment to continuous learning, aiming to contribute effectively to both organizational success and personal advancement.
+            </p>
+          </div>
+        </div>
+      </section>
+       
+
+      <a name="experience"><hr class="seperator" /></a>
+<br />
+
+<div class="companies">
+        <header><p class="all-heading text-animator">Selected in Top MNCs</p></header>
+        <div class="company-container">
+          <!-- Technologies 1 -->
+          
+            <div class="comp-container">
+              <img src="assets/Companies/Accenture-logo-no-background.png" class="comp-logo" />
+              <img src="assets/Companies/tcs.png" class="comp-logo" id="#tcs"/>              
+              <img src="assets/Companies/mindtree.png" class="comp-logo" />
+              <img src="assets/Companies/techMahindra-removebg-preview.png" class="comp-logo" id="techM"/>
+              </div>
+          
+        </div>
+        </div>
+
+
+<!-- This is Experience Section -->
+<div class="Experience">
+  <header><p class="all-heading text-animator">Experience</p></header>
+  <div class="exp-container">
+
+    <!-- Experience 1 -->
+    <div class="exp-card">
+      <div><p class="exp-header">Salesforce Developer</p></div>
+      <div class="exp-descBox">
+        <p class="exp-desc">
+          <b>Organization : </b>Accenture <br />
+          <b>Duration : </b>November 2024 – Present (1 Year) <br /><br />
+          Actively involved in resolving user issues by analyzing multiple scenarios and identifying root causes within the Salesforce platform. Focused on implementing scalable and efficient solutions, developing customized features using Lightning Web Components (LWC) and Aura Components, handling data migration through Data Loader, Data Import Wizard, and Batch Apex, and creating automation using Salesforce Flows to streamline processes and enhance efficiency.
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<br />
+<br />
+
+      
+      <a name="education"><hr class="seperator" /></a>
+      <br />
+
+      <!-- This is Education Section -->
+      <!-- This is Education Section -->
+      <div class="education">
+        <header><p class="all-heading text-animator">Education</p></header>
+        <div class="edu-container">
+          <!-- Education 1 -->
+          <div class="edu-card lnct">
+            <div><p class="edu-header">Master of Computer Applications</p></div>
+            <div class="edu-descBox">
+              <p class="edu-desc">
+                <b>College : </b>Lakshmi Narain College of Technology, Bhopal
+                <br />
+                <b>CGPA : </b>8.62
+              </p>
+            </div>
+          </div>
+          <!-- Education 2 -->
+          <div class="edu-card du">
+            <div><p class="edu-header">B.Sc(Hons) Physics</p></div>
+            <div class="edu-descBox">
+              <p class="edu-desc">
+                <b>College : </b>Deshbandhu College, Delhi University <br />
+                <b>CGPA : </b>8.01
+              </p>
+            </div>
+          </div>
+          <!-- Education 2 -->
+          <div class="edu-card school">
+            <div><p class="edu-header">Class XII</p></div>
+            <div class="edu-descBox">
+              <p class="edu-desc">
+                <b>School : </b>Vivek Jyoti H.S. School, Balaghat(MP) <br />
+                <b>Percentage : </b>88.80%
+              </p>
+            </div>
+          </div>
+          <!-- Education 2 -->
+          <div class="edu-card school">
+            <div><p class="edu-header">Class X</p></div>
+            <div class="edu-descBox">
+              <p class="edu-desc">
+                <b>School : </b>Vivek Jyoti H.S. School, Balaghat(MP) <br />
+                <b>Percentage : </b>89.83%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <a name="technologies"><hr class="seperator" /></a>
+      <br />
+
+      <!-- This is Technologies Section -->
+      <!-- This is Technologies Section -->
+      <div class="technologies">
+        <header><p class="all-heading text-animator">Technologies</p></header>
+        <div class="technology-container">
+          <!-- Technologies 1 -->
+          <div class="tech-card">
+            <h2 class="tech-header">Frontend</h2>
+
+            <div class="tech-container">
+              <div class="tech-tab">
+                <img src="assets/frontend/htmlLogo.webp" class="tech-logo" />
+                HTML
+              </div>
+              <div class="tech-tab">
+                <img
+                  src="assets/frontend/css.webp
+                            "
+                  class="tech-logo"
+                />
+                CSS
+              </div>
+              <div class="tech-tab">
+                <img
+                  src="assets/frontend/bootstrapLogo.webp"
+                  class="tech-logo"
+                />
+                Bootstrap
+              </div>
+              <div class="tech-tab">
+                <img src="assets/frontend/jsLogo.webp" class="tech-logo" />
+                JavaScript
+              </div>
+              <div class="tech-tab">
+                <img src="assets/frontend/reactJs.webp" class="tech-logo" />
+                React.js
+              </div>
+            </div>
+          </div>
+
+          <!-- Technologies 2 -->
+          <div class="tech-card">
+            <h2 class="tech-header">Backend</h2>
+            <div class="tech-container temp-margin">
+              <div class="tech-tab">
+                <img
+                  src="assets/backend/nodeJs.webp"
+                  class="tech-logo"
+                />Node.js
+              </div>
+              <div class="tech-tab">
+                <img src="assets/backend/mysql.webp" class="tech-logo" />MySQL
+              </div>
+              <div class="tech-tab">
+                <img
+                  style="width: 2.5rem; height: 1.4rem"
+                  src="assets/backend/phpLogo.webp"
+                  class="tech-logo"
+                />php
+              </div>
+            </div>
+          </div>
+
+          <!-- Technologies 3 -->
+          <div class="tech-card">
+            <h2 class="tech-header">Programming Languages</h2>
+            <div class="tech-container temp-margin">
+              <div class="tech-tab">
+                <img src="assets/languages/java.webp" class="tech-logo" />
+                Java
+              </div>
+              <div class="tech-tab">
+                <img src="assets/languages/pythonLogo.webp" class="tech-logo" />
+                Python
+              </div>
+              <div class="tech-tab">
+                <img src="assets/languages/cLogo.webp" class="tech-logo" />
+                C
+              </div>
+            </div>
+          </div>
+          <!-- Technologies 4 -->
+          <div class="tech-card">
+            <h2 class="tech-header">Platforms</h2>
+            <div class="tech-container">
+              <div class="tech-tab">
+                <img src="assets/platforms/vsCode.webp" class="tech-logo" />VS
+                Code
+              </div>
+              <div class="tech-tab">
+                <img src="assets/platforms/gitLogo.webp" class="tech-logo" />Git
+              </div>
+              <div class="tech-tab">
+                <img src="assets/connect/github.webp" class="tech-logo" />GitHub
+              </div>
+              <div class="tech-tab">
+                <img
+                  src="assets/platforms/intelliJLogo.webp"
+                  class="tech-logo"
+                />IntelliJ IDEA
+              </div>
+              <div class="tech-tab">
+                <img
+                  src="assets/platforms/mysqlworkbench.webp"
+                  class="tech-logo"
+                />MySQL Workbench
+              </div>
+              <div class="tech-tab">
+                <img
+                  src="https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png"
+                  class="tech-logo"
+                />Netlify
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <a name="skills"> <hr class="seperator" /></a>
+      <!-- This is Education Section -->
+      <!-- This is Education Section -->
+      <br />
+
+      <!-- Skills Section -->
+      <!-- Skills Section -->
+      <div class="skills">
+        <header><p class="all-heading text-animator">Skills</p></header>
+        <div class="skills-container">
+          <!-- Skill 1 -->
+          <div class="skill-card salesforce">
+            <div class="skill-header"><p>Salesforce</p></div>
+            <div class="skill-logo">
+              <img
+                class="skill-pic"
+                src="assets/skills/Salesforce.webp"
+                alt=""
+              />
+            </div>
+            <div class="skill-descBox">
+              <p class="skill-desc">
+                I bring a comprehensive skill set and extensive experience in
+                Salesforce Administration, Salesforce Development. Completed
+                more than 15 superbadges and Admin SuperSet on Salesforce
+                Trailhead Platform. <br />
+                <br />Checkout my Salesforce Trailhead profile :
+              </p>
+            </div>
+            <div class="skill-btn-container">
+              <a
+                href="https://www.salesforce.com/trailblazer/aayushpatle"
+                target="_blank"
+                ><button class="skill-btn skill-tb"></button
+              ></a>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="skill-card front-end">
+            <div class="skill-header">
+              <p id="skill-feh">Web Development</p>
+            </div>
+            <div class="skill-logo">
+              <img class="skill-pic" src="assets/skills/webdev.webp" alt="" />
+            </div>
+            <div class="skill-descBox">
+              <p class="skill-desc">
+                As a web developer and web designer, I specialize in crafting,
+                engaging and building responsive user interfaces. With expertise
+                in HTML, CSS, Bootstrap framework, and JavaScript, I create
+                visually appealing and functional websites. I am dedicated to
+                stay updated with the latest web development trends and best
+                practices.
+              </p>
+            </div>
+            <div class="skill-btn-container"></div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="skill-card problem-solving">
+            <div class="skill-header"><p>Problem Solving</p></div>
+            <div class="skill-logo">
+              <img
+                class="skill-pic"
+                src="assets/skills/problem-solving.webp"
+                alt=""
+              />
+            </div>
+            <div class="skill-descBox">
+              <p class="skill-desc" style="margin-bottom: 0">
+                I prioritize problem-solving, leveraging Java as my primary
+                programming language. I've successfully solved over 300 coding
+                problems on LeetCode, I am a 5-star coder on HackerRank in Java
+                and SQL problem solving. <br /><br />Checkout my Profiles :
+              </p>
+            </div>
+            <div class="skill-btn-container">
+              <a href="https://leetcode.com/__aayush_01/" target="_blank"
+                ><button class="skill-btn skill-lc"></button></a
+              ><br />
+              <a
+                href="https://www.hackerrank.com/profile/aayushpatle01"
+                target="_blank"
+                ><button class="skill-hk skill-btn"></button
+              ></a>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="skill-card soft-skills">
+            <div class="skill-header"><p>Soft Skills</p></div>
+            <div class="skill-logo">
+              <img
+                class="skill-pic"
+                src="assets/skills/softskill.webp"
+                alt=""
+              />
+            </div>
+            <div class="skill-descBox">
+              <p class="skill-desc">
+                My skill set encompasses essential soft and interpersonal
+                skills, emphasizing effective communication, teamwork. I
+                navigate diverse environments with adaptability and resolve
+                conflicts constructively.I contribute positively to team
+                dynamics and organizational success.
+              </p>
+            </div>
+            <div class="skill-btn-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <!-- Skills Section -->
+      <br /><br />
+      <a name="projects"><hr class="seperator" /></a>
+      <br />
+      <!-- Projects Section -->
+      <!-- Projects Section -->
+      <div class="project">
+        <header><p class="all-heading text-animator">Projects</p></header>
+
+        <div class="proj-container">
+          <!-- Project 1 -->
+          <div class="proj-card">
+            <div class="proj-image-box">
+              <img
+                class="proj-img"
+                src="assets/projects/myntra-logo.webp"
+                alt=""
+              />
+            </div>
+            <div class="proj-header"><p>MYNTRA CLONE</p></div>
+            <div class="proj-lower-div">
+              <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Bootstrap</span>
+              </div>
+              <div class="proj-desc">
+                It is a clone website of the online Shopping Application Myntra.
+              </div>
+            </div>
+            <a
+              class="proj-click-btn"
+              href="https://aayush-017868.github.io/Myntra-Clone/"
+              target="_blank"
+            >
+              <button class="proj-choose">Click to open</button>
+            </a>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="proj-card project5">
+            <div class="proj-image-box">
+              <img class="proj-img" src="assets/projects/tin-dog.webp" alt="" />
+            </div>
+            <div class="proj-header"><p>TINDER FOR DOGS</p></div>
+            <div class="proj-lower-div">
+              <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Bootstrap</span>
+              </div>
+              <div class="proj-desc">
+                It is a tinder web app for dogs where different dogs of
+                different breeds can be matched up having multiple features
+              </div>
+            </div>
+            <a
+              class="proj-click-btn"
+              href="https://aayush-017868.github.io/Tinder-for-Dogs/"
+              target="_blank"
+            >
+              <button class="proj-choose">Click to open</button>
+            </a>
+          </div>
+
+          <div class="proj-card project1">
+            <div class="proj-image-box">
+              <img
+                class="proj-img"
+                src="assets/projects/guessmynum.webp"
+                alt=""
+              />
+            </div>
+            <div class="proj-header"><p>GUESS MY NUMBER GAME</p></div>
+            <div class="proj-lower-div">
+              <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Bootstrap</span>
+              </div>
+              <div class="proj-desc">
+                It is a simple number guessing game where user guesses a number
+                between a range of 0 to 100 and gets score accordingly.
+              </div>
+            </div>
+            <a
+              class="proj-click-btn"
+              href="https://aayush-017868.github.io/Guess-My-Number/"
+              target="_blank"
+            >
+              <button class="proj-choose">Click to open</button>
+            </a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-image-box">
+              <img
+                class="proj-img"
+                src="assets/projects/password-generator.webp"
+                alt=""
+              />
+            </div>
+            <div class="proj-header"><p>PASSWORD GENERATOR</p></div>
+            <div class="proj-lower-div">
+              <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">jQuery</span>
+                <span class="tool-btn">Bootstrap</span>
+              </div>
+              <div class="proj-desc">
+                This application helps you generate strong and secure passwords
+                effortlessly.
+              </div>
+            </div>
+            <a
+              class="proj-click-btn"
+              href="https://aayush-017868.github.io/Password-Generator/"
+              target="_blank"
+            >
+              <button class="proj-choose">Click to open</button>
+            </a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-image-box">
+              <img
+                class="proj-img"
+                src="assets/projects/simon-game.webp"
+                alt=""
+              />
+            </div>
+            <div class="proj-header"><p>THE SIMON GAME</p></div>
+            <div class="proj-lower-div">
+              <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">jQuery</span>
+                <span class="tool-btn">Bootstrap</span>
+              </div>
+              <div class="proj-desc">
+                It is a memory challenge & an adrenaline-pumping race against
+                time game! Dive into a world of colors, sounds, and mind-bending
+                sequences.
+              </div>
+            </div>
+            <a
+              class="proj-click-btn"
+              href="https://aayush-017868.github.io/Simon-Game/"
+              target="_blank"
+            >
+              <button class="proj-choose">Click to open</button>
+            </a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-image-box">
+              <img
+                class="proj-img"
+                src="assets/projects/drum-kit.webp"
+                alt=""
+              />
+            </div>
+            <div class="proj-header"><p>DRUM KIT</p></div>
+            <div class="proj-lower-div">
+              <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">jQuery</span>
+                <span class="tool-btn">Bootstrap</span>
+              </div>
+              <div class="proj-desc">
+                This is a fun and interactive drum kit website that allows you
+                to play different drum sounds right from your browser.
+              </div>
+            </div>
+            <a
+              class="proj-click-btn"
+              href="https://aayush-017868.github.io/Drum-Play/"
+              target="_blank"
+            >
+              <button class="proj-choose">Click to open</button>
+            </a>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="proj-card project2">
+            <div class="proj-image-box">
+              <img
+                class="proj-img"
+                src="assets/projects/countryflag.webp"
+                alt=""
+              />
+            </div>
+            <div class="proj-header"><p>COUNTRY FLAG (CSS)</p></div>
+            <div class="proj-lower-div">
+              <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Bootstrap</span>
+              </div>
+              <div class="proj-desc">
+                This website is used to enhance the CSS knowledge in which the
+                flags of different countries are designed using pure CSS.
+              </div>
+            </div>
+            <a
+              class="proj-click-btn"
+              href="https://aayush-017868.github.io/Country-Flags/"
+              target="_blank"
+            >
+              <button class="proj-choose">Click to open</button>
+            </a>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="proj-card project3">
+            <div class="proj-image-box">
+              <img
+                class="proj-img"
+                src="assets/projects/calculator-app.webp"
+                alt=""
+              />
+            </div>
+            <div class="proj-header"><p>CALCULATOR</p></div>
+            <div class="proj-lower-div">
+              <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Tailwind</span>
+              </div>
+              <div class="proj-desc">
+                It is a simple calculator that can perform all the basic
+                arithmatic operations.
+              </div>
+            </div>
+            <a
+              class="proj-click-btn"
+              href="https://aayush-017868.github.io/Calculator/"
+              target="_blank"
+            >
+              <button class="proj-choose">Click to open</button>
+            </a>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="proj-card project4">
+            <div class="proj-image-box">
+              <img
+                class="proj-img"
+                src="https://play-lh.googleusercontent.com/Vn9sIUPcCVihrxMATWR_MjCIFuc5quCw-R3UN8Rmoze7rgaBhHdmF2RqjX3x28EJoQ"
+                alt=""
+              />
+            </div>
+            <div class="proj-header"><p>TEMPERATURE CONVERTOR</p></div>
+            <div class="proj-lower-div">
+              <div class="tool-box">
+                <span class="tool-btn">HTML</span>
+                <span class="tool-btn">CSS</span>
+                <span class="tool-btn">JavaScript</span>
+                <span class="tool-btn">Bootstrap</span>
+              </div>
+              <div class="proj-desc">
+                It is a temperature convertor which converts the temperature
+                within kelvin, farhenite and celcius.
+              </div>
+            </div>
+            <a
+              class="proj-click-btn"
+              href="https://aayush-017868.github.io/Temperature-Convertor/"
+              target="_blank"
+            >
+              <button class="proj-choose">Click to open</button>
+            </a>
+          </div>
+
+          <!-- Project 5 -->
+        </div>
+      </div>
+
+      <br /><br />
+      <a name="connect"><hr class="seperator" /></a>
+      <br />
+      <!-- Projects Section -->
+      <!-- Projects Section -->
+
+      <div class="connect">
+        <header><p class="connect-heading text-animator">Connect</p></header>
+        <!-- Connection Section -->
+        <!-- Connection Section -->
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/aayush-patle-31878a225/"
+            class="social-link"
+            id="linkedin"
+            target="_blank"
+          >
+            <img
+              src="assets/connect/linkedin.webp"
+              alt="LinkedIn"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://github.com/aayush-017868"
+            class="social-link"
+            id="github"
+            target="_blank"
+          >
+            <img
+              src="assets/connect/github.webp"
+              alt="GitHub"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://www.hackerrank.com/profile/aayushpatle01"
+            class="social-link"
+            id="hackerrank"
+            target="_blank"
+          >
+            <img
+              src="assets/connect/hckrnk.webp"
+              alt="HackerRank"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://leetcode.com/__aayush_01/"
+            class="social-link"
+            id="leetcode"
+            target="_blank"
+          >
+            <img
+              src="assets/connect/lc.webp"
+              alt="LeetCode"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://youtube.com/@apxcreations5989?si=wfNJLpEh_CcfoBJ_"
+            class="social-link"
+            id="youtube"
+            target="_blank"
+          >
+            <img
+              src="assets/connect/ytLogo.webp"
+              alt="YouTube"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/__aayush_01/"
+            class="social-link"
+            id="instagram"
+            target="_blank"
+          >
+            <img
+              src="assets/connect/insta.webp"
+              alt="Instagram"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100006274249043"
+            class="social-link"
+            id="facebook"
+            target="_blank"
+          >
+            <img
+              src="assets/connect/fbLogo.webp"
+              alt="Facebook"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://twitter.com/PatleAayush"
+            class="social-link"
+            id="x"
+            target="_blank"
+          >
+            <img src="assets/connect/x.webp" alt="X" class="social-icon" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Connection Section -->
+      <!-- Connection Section -->
+      <a name="contact"><br class="seperator" /></a>
+      <br /><br />
+      <!-- Contact Section -->
+      <!-- Contact Section -->
+
+      <div id="contact">
+        <h2 style="color: #06bef3" class="subheading">Contact</h2>
+        <div class="contact-container">
+          <div class="left">
+            <div class="form">
+              <input
+                type="text"
+                id="name"
+                placeholder="Name*"
+                fdprocessedid="bk5q9g"
+              />
+              <input
+                type="text"
+                placeholder="Email*"
+                id="email"
+                fdprocessedid="e6vp"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                id="subject"
+                fdprocessedid="m6i6ic"
+              />
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Message"
+              ></textarea>
+              <button id="submit" onclick="sendEmail()" fdprocessedid="8lz8og">
+                Submit
+              </button>
+            </div>
+          </div>
+          <div class="right">
+            <div class="g1">
+              <h3 style="color: #06bef3">Aayush Patle</h3>
+              <p>Programmer &amp; Developer</p>
+            </div>
+            <div class="g2">
+              <h4 style="color: #06bef3">Email</h4>
+              <p>aayushpatle01@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">© Aayush Patle 2024</p>
+      </div>
+      <!-- Contact Section -->
+      <!-- Contact Section -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
