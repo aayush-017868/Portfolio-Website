@@ -93,6 +93,8 @@ window.onclick = function(event) {
 // Nigh Mode toggle button
 var totalSeperator = document.getElementsByClassName('seperator').length;
 
+var companies = document.getElementsByClassName('comp-logo').length;
+
 var totalExperience = document.getElementsByClassName('exp-card').length;
 
 var totalEducation = document.getElementsByClassName('edu-card').length;
@@ -111,7 +113,7 @@ function toggleNightMode() {
   // This is for seperators
   for(let i = 0; i < totalSeperator; i++){
    document.querySelectorAll('.seperator')[i].classList.toggle('seperator-night');
-  }    
+  }   
   // This is for experience cards
  for(let i = 0; i < totalExperience; i++){
    document.querySelectorAll('.exp-card')[i].classList.toggle('night-card');
@@ -142,5 +144,9 @@ for(let i = 0; i < totalTechTabs; i++){
     document.querySelectorAll('.proj-card')[i].classList.toggle('night-card');
     document.querySelectorAll('.proj-card')[i].classList.toggle('border-night');
   }  
+   //This is for accenture logo in night mode
+   for(let i = 0; i < companies; i++){
+   document.querySelectorAll('.acc-logo')[i].classList.toggle('comp-night');
+  } 
 
 }

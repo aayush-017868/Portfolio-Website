@@ -629,7 +629,7 @@ h2.subheading {
 
 .lnct:hover::before {
   left: 0;
-  opacity: 0.25;
+  opacity: 0.15;
 }
 /*For DU*/
 .du::before {
@@ -1384,4 +1384,9 @@ button {
 
 .input:checked + .slider:before {
   transform: translateX(30px);
+}
+
+/*How to change the accenture logo for night mode*/
+.comp-night{
+  content: url(assets/Companies/accentureBlackBG.png);
 }
